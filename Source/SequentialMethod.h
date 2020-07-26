@@ -2,7 +2,7 @@
 
 #pragma once
 
-template<typename BallotType = CardinalBallot>
+template<typename BallotType = ScoreBallot>
 class SequentialMethod : public MultiWinnerMethod<BallotType>
 {
 public:

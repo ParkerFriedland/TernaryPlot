@@ -5,5 +5,5 @@
 class KPT
 {
 public:
-	std::vector<CardinalBallot> TransformBallots(std::vector<CardinalBallot> ballots);
+	std::vector<ScoreBallot> TransformBallots(std::vector<ScoreBallot> ballots);
 };

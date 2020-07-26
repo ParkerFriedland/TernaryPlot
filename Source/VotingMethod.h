@@ -1,9 +1,9 @@
-#include "CardinalBallot.h"
+#include "ScoreBallot.h"
 #include "Outcome.h"
 
 #pragma once
 
-template<typename BallotType = CardinalBallot>
+template<typename BallotType = ScoreBallot>
 class VotingMethod
 {
 public:

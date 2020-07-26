@@ -6,9 +6,9 @@
 class DerivedOrdering : public OrderingMethod
 {
 public:
-	DerivedOrdering(OptimalMethod<CardinalBallot> &engine);
-	unsigned CalculateNextWinner(std::vector<CardinalBallot> &ballots, const Outcome &winners, bool oneSeatPerWinner) override;
+	DerivedOrdering(OptimalMethod<ScoreBallot> &engine);
+	unsigned CalculateNextWinner(std::vector<ScoreBallot> &ballots, const Outcome &winners, bool oneSeatPerWinner) override;
 
 private:
-	OptimalMethod<CardinalBallot> &_engine;
+	OptimalMethod<ScoreBallot> &_engine;
 };

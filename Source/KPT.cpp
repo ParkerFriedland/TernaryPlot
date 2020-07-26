@@ -1,6 +1,6 @@
 #include "KPT.h"
 
-std::vector<CardinalBallot> KPT::TransformBallots(std::vector<CardinalBallot> ballots)
+std::vector<ScoreBallot> KPT::TransformBallots(std::vector<ScoreBallot> ballots)
 {
-	return std::vector<CardinalBallot>(); // temparary
+	return std::vector<ScoreBallot>(); // temparary
 }

@@ -1,7 +1,7 @@
-#include "CardinalBallot.h"
+#include "ScoreBallot.h"
 
 class ReweightingComponent
 {
 public:
-	virtual void ReweightBallots(std::vector<CardinalBallot> &ballots, unsigned lastWinner) = 0;
+	virtual void ReweightBallots(std::vector<ScoreBallot> &ballots, unsigned lastWinner) = 0;
 };

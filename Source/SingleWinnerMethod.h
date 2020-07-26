@@ -1,6 +1,6 @@
 #include "VotingMethod.h"
 
-class SinlgeWinnerMethod : public VotingMethod<CardinalBallot>
+class SinlgeWinnerMethod : public VotingMethod<ScoreBallot>
 {
 public:
 	SinlgeWinnerMethod();

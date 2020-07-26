@@ -2,7 +2,7 @@
 
 #pragma once
 
-template<typename BallotType = CardinalBallot>
+template<typename BallotType = ScoreBallot>
 class MultiWinnerMethod : public VotingMethod<BallotType>
 {
 public:

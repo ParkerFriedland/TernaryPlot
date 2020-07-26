@@ -2,7 +2,7 @@
 
 #pragma once
 
-template<typename BallotType = CardinalBallot, typename QualityValue = double>
+template<typename BallotType = ScoreBallot, typename QualityValue = double>
 class OptimalMethod : public MultiWinnerMethod<BallotType>
 {
 public:

@@ -4,10 +4,10 @@
 
 #pragma once
 
-class CardinalBallot : public Ballot
+class ScoreBallot : public Ballot
 {
 public:
-	CardinalBallot(std::vector<double> &scores, double weight = 1.0, Random &prng = Random());
+	ScoreBallot(std::vector<double> &scores, double weight = 1.0, Random &prng = Random());
 
 	void RandomizePrefrences();
 

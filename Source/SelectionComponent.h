@@ -1,4 +1,4 @@
-#include "CardinalBallot.h"
+#include "ScoreBallot.h"
 
 #pragma once
 
@@ -6,5 +6,5 @@ class SelectionComponent
 {
 public:
 	SelectionComponent();
-	unsigned SelectWinner(const std::vector<CardinalBallot> &ballots, unsigned seats);
+	unsigned SelectWinner(const std::vector<ScoreBallot> &ballots, unsigned seats);
 };

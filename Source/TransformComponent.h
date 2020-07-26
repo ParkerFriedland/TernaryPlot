@@ -1,9 +1,9 @@
-#include "CardinalBallot.h"
+#include "ScoreBallot.h"
 
 #pragma once
 
 class TransformComponent
 {
 public:
-	virtual std::vector<CardinalBallot> TransformBallots(std::vector<CardinalBallot> ballots) = 0;
+	virtual std::vector<ScoreBallot> TransformBallots(std::vector<ScoreBallot> ballots) = 0;
 };

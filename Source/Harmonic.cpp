@@ -2,11 +2,11 @@
 
 Harmonic::Harmonic(unsigned seats, bool oneSeatPerWinner) : OptimalMethod(seats, oneSeatPerWinner) {}
 
-double Harmonic::CalculateOutcomeQuality(const std::vector<CardinalBallot> &ballots, const Outcome &outcome)
+double Harmonic::CalculateOutcomeQuality(const std::vector<ScoreBallot> &ballots, const Outcome &outcome)
 {
 	double quality = 0;
 
-	for (CardinalBallot ballot : ballots)
+	for (ScoreBallot ballot : ballots)
 	{
 		// There's probably a more efficiant way of calculating this.
 		double gap, threashold = 1.0;

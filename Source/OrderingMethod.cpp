@@ -1,6 +1,6 @@
 #include "OrderingMethod.h"
 
-unsigned OrderingMethod::CalculateNextWinner(std::vector<CardinalBallot> &ballots, const Outcome &winners, unsigned seats, bool oneSeatPerWinner)
+unsigned OrderingMethod::CalculateNextWinner(std::vector<ScoreBallot> &ballots, const Outcome &winners, unsigned seats, bool oneSeatPerWinner)
 {
 	return CalculateNextWinner(ballots, winners, oneSeatPerWinner);
 }

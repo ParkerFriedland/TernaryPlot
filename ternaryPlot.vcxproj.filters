@@ -125,519 +125,522 @@
     <Filter Include="Source Files\Voting\Election\Components\Ballots\Cardinal">
       <UniqueIdentifier>{d94d7764-dbdf-45fb-a80d-456d58673c06}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Source Files\Voting\Election\Components\Ballots\Cardinal\With Additional Information">
-      <UniqueIdentifier>{a0146b3a-53bb-4adc-97b7-edfa993bd270}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Source Files\Voting\Election\Components\Ballots\Approval">
-      <UniqueIdentifier>{25eeddaf-66cc-4fa6-bab0-04a86eb919ae}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Source Files\Voting\Election\Components\Ballots\FPTP">
-      <UniqueIdentifier>{6a3b500b-2bd8-4497-9c6e-2d777661a341}</UniqueIdentifier>
-    </Filter>
     <Filter Include="Source Files\Voting\Election\Components\Ballots\Ordinal">
       <UniqueIdentifier>{682032ca-dbdc-429d-ba49-1119a82beace}</UniqueIdentifier>
     </Filter>
     <Filter Include="Source Files\Voting\Election\Components\Results">
       <UniqueIdentifier>{9888dae8-8de4-4475-b878-44ee18c3523c}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Source Files\Voting\Election\Components\Ballots\Cardinal\Approval">
+      <UniqueIdentifier>{25eeddaf-66cc-4fa6-bab0-04a86eb919ae}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Voting\Election\Components\Ballots\Ordinal\FPTP">
+      <UniqueIdentifier>{6a3b500b-2bd8-4497-9c6e-2d777661a341}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Voting\Election\Components\Ballots\Cardinal\Score">
+      <UniqueIdentifier>{1243f1ab-2b49-4066-beed-93f51751f42b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Voting\Election\Components\Ballots\Cardinal\Score\With Additional Information">
+      <UniqueIdentifier>{a0146b3a-53bb-4adc-97b7-edfa993bd270}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Barycentric.cpp">
-      <Filter>Resource Files</Filter>
+    <ClCompile Include="Source\ApprovalBallot.cpp">
+      <Filter>Source Files\Voting\Election\Components\Ballots\Cardinal\Approval</Filter>
     </ClCompile>
-    <ClCompile Include="Vector2D.cpp">
-      <Filter>Resource Files</Filter>
+    <ClCompile Include="Source\Ballot.cpp">
+      <Filter>Source Files\Voting\Election\Components\Ballots\Base Class</Filter>
     </ClCompile>
-    <ClCompile Include="ApportionmentAlgorithems.cpp">
+    <ClCompile Include="Source\CappedCardinal.cpp">
+      <Filter>Source Files\Voting\Election\Components\Ballots\Cardinal\Score\With Additional Information</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\SubtractedCardinal.cpp">
+      <Filter>Source Files\Voting\Election\Components\Ballots\Cardinal\Score\With Additional Information</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\FPTPBallot.cpp">
+      <Filter>Source Files\Voting\Election\Components\Ballots\Ordinal\FPTP</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\OrdinalBallot.cpp">
+      <Filter>Source Files\Voting\Election\Components\Ballots\Ordinal</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Domain.cpp">
+      <Filter>Source Files\Voting\Election\Components\Domain</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Outcome.cpp">
+      <Filter>Source Files\Voting\Election\Components\Results</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Election.cpp">
+      <Filter>Source Files\Voting\Election\Components</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\VotingMethod.cpp">
+      <Filter>Source Files\Voting\Methods\Base Class</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\ReweightingComponent.cpp">
+      <Filter>Source Files\Voting\Methods\Components\Reweighting Components\Base Class</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\LinearDivisor.cpp">
+      <Filter>Source Files\Voting\Methods\Components\Reweighting Components</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\UnitaryCapping.cpp">
+      <Filter>Source Files\Voting\Methods\Components\Reweighting Components</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\SelectionComponent.cpp">
+      <Filter>Source Files\Voting\Methods\Components\Selection Components\Base Class</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\HareSelection.cpp">
+      <Filter>Source Files\Voting\Methods\Components\Selection Components</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\ScoreSelection.cpp">
+      <Filter>Source Files\Voting\Methods\Components\Selection Components</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\STARSelection.cpp">
+      <Filter>Source Files\Voting\Methods\Components\Selection Components</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\TransformComponent.cpp">
+      <Filter>Source Files\Voting\Methods\Components\Transformation Components\Base Class</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\KPT.cpp">
+      <Filter>Source Files\Voting\Methods\Components\Transformation Components</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\NoTransformation.cpp">
+      <Filter>Source Files\Voting\Methods\Components\Transformation Components</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\PT.cpp">
+      <Filter>Source Files\Voting\Methods\Components\Transformation Components</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\MultiWinnerMethod.cpp">
+      <Filter>Source Files\Voting\Methods\Multi Winner\Base Class</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\OptimalMethod.cpp">
+      <Filter>Source Files\Voting\Methods\Multi Winner\Optimal\Base Class</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\CPOSTV.cpp">
+      <Filter>Source Files\Voting\Methods\Multi Winner\Optimal\Non Standard Optimal</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\DirectSmithSetScore.cpp">
+      <Filter>Source Files\Voting\Methods\Multi Winner\Optimal\Non Standard Optimal</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\InderectSmithSetScore.cpp">
+      <Filter>Source Files\Voting\Methods\Multi Winner\Optimal\Non Standard Optimal</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\SchulzeSTV.cpp">
+      <Filter>Source Files\Voting\Methods\Multi Winner\Optimal\Non Standard Optimal</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Ebert.cpp">
+      <Filter>Source Files\Voting\Methods\Multi Winner\Optimal</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Harmonic.cpp">
+      <Filter>Source Files\Voting\Methods\Multi Winner\Optimal</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\HarmonicPT.cpp">
+      <Filter>Source Files\Voting\Methods\Multi Winner\Optimal</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\LeastSquares.cpp">
+      <Filter>Source Files\Voting\Methods\Multi Winner\Optimal</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\MonroeApproval.cpp">
+      <Filter>Source Files\Voting\Methods\Multi Winner\Optimal</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\MonroeOrdinal.cpp">
+      <Filter>Source Files\Voting\Methods\Multi Winner\Optimal</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\MonroeScore.cpp">
+      <Filter>Source Files\Voting\Methods\Multi Winner\Optimal</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\PASMAC.cpp">
+      <Filter>Source Files\Voting\Methods\Multi Winner\Optimal</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\PAV.cpp">
+      <Filter>Source Files\Voting\Methods\Multi Winner\Optimal</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\PSI.cpp">
+      <Filter>Source Files\Voting\Methods\Multi Winner\Optimal</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Unitary.cpp">
+      <Filter>Source Files\Voting\Methods\Multi Winner\Optimal</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\SequentialMethod.cpp">
+      <Filter>Source Files\Voting\Methods\Multi Winner\Sequential\Base Class</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\ComponentStructured.cpp">
+      <Filter>Source Files\Voting\Methods\Multi Winner\Sequential\Component Structured\Base Class</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\ApportionedCardinalVoting.cpp">
+      <Filter>Source Files\Voting\Methods\Multi Winner\Sequential\Component Structured\Non Standard Structure\Apportioned Cardinal Voting\Base Class</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\AllocatedScore.cpp">
+      <Filter>Source Files\Voting\Methods\Multi Winner\Sequential\Component Structured</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\AllocatedSTAR.cpp">
+      <Filter>Source Files\Voting\Methods\Multi Winner\Sequential\Component Structured</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\ApportionedScoreVoting.cpp">
+      <Filter>Source Files\Voting\Methods\Multi Winner\Sequential\Component Structured\Non Standard Structure\Apportioned Cardinal Voting</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\ApportionedSTARVoting.cpp">
+      <Filter>Source Files\Voting\Methods\Multi Winner\Sequential\Component Structured\Non Standard Structure\Apportioned Cardinal Voting</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\ReweightedSTAR.cpp">
+      <Filter>Source Files\Voting\Methods\Multi Winner\Sequential\Component Structured\Non Standard Structure\Final Round Structure</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\SequentialMonroe_STAR.cpp">
+      <Filter>Source Files\Voting\Methods\Multi Winner\Sequential\Component Structured\Non Standard Structure\Final Round Structure</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\HareRRV.cpp">
+      <Filter>Source Files\Voting\Methods\Multi Winner\Sequential\Component Structured</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\HareSequentiallySpentScore.cpp">
+      <Filter>Source Files\Voting\Methods\Multi Winner\Sequential\Component Structured</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\HareSPAV.cpp">
+      <Filter>Source Files\Voting\Methods\Multi Winner\Sequential\Component Structured</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\OldProportionalSTAR.cpp">
+      <Filter>Source Files\Voting\Methods\Multi Winner\Sequential\Component Structured</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\SequentiallySpentScore.cpp">
+      <Filter>Source Files\Voting\Methods\Multi Winner\Sequential\Component Structured</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\OrderingMethod.cpp">
+      <Filter>Source Files\Voting\Methods\Multi Winner\Sequential\Ordering Methods\Base Class</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\DerivedOrdering.cpp">
+      <Filter>Source Files\Voting\Methods\Multi Winner\Sequential\Ordering Methods\Derived Ordering\Base Class</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\HarmonicPTOrdering.cpp">
+      <Filter>Source Files\Voting\Methods\Multi Winner\Sequential\Ordering Methods\Derived Ordering</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\LeastSquaresOrdering.cpp">
+      <Filter>Source Files\Voting\Methods\Multi Winner\Sequential\Ordering Methods\Derived Ordering</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\MonroeOrdering.cpp">
+      <Filter>Source Files\Voting\Methods\Multi Winner\Sequential\Ordering Methods\Derived Ordering</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\PASMACOrdering.cpp">
+      <Filter>Source Files\Voting\Methods\Multi Winner\Sequential\Ordering Methods\Derived Ordering</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\PSIOrdering.cpp">
+      <Filter>Source Files\Voting\Methods\Multi Winner\Sequential\Ordering Methods\Derived Ordering</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\SequentialEbert.cpp">
+      <Filter>Source Files\Voting\Methods\Multi Winner\Sequential\Ordering Methods\Derived Ordering</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\UnitaryOrdering.cpp">
+      <Filter>Source Files\Voting\Methods\Multi Winner\Sequential\Ordering Methods\Derived Ordering</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\BlocApproval.cpp">
+      <Filter>Source Files\Voting\Methods\Multi Winner\Sequential\Ordering Methods\Selection Only</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\BlocScore.cpp">
+      <Filter>Source Files\Voting\Methods\Multi Winner\Sequential\Ordering Methods\Selection Only</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\BlocSTAR.cpp">
+      <Filter>Source Files\Voting\Methods\Multi Winner\Sequential\Ordering Methods\Selection Only</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Cumulative.cpp">
+      <Filter>Source Files\Voting\Methods\Multi Winner\Sequential\Ordering Methods\Selection Only</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Quadratic.cpp">
+      <Filter>Source Files\Voting\Methods\Multi Winner\Sequential\Ordering Methods\Selection Only</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\SNTV.cpp">
+      <Filter>Source Files\Voting\Methods\Multi Winner\Sequential\Ordering Methods\Selection Only</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\RRV.cpp">
+      <Filter>Source Files\Voting\Methods\Multi Winner\Sequential\Ordering Methods</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\SPAV.cpp">
+      <Filter>Source Files\Voting\Methods\Multi Winner\Sequential\Ordering Methods</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\SPSV.cpp">
+      <Filter>Source Files\Voting\Methods\Multi Winner\Sequential\Ordering Methods</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\BlocPlurality.cpp">
+      <Filter>Source Files\Voting\Methods\Multi Winner\Sequential</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\DistributedMultiWinner.cpp">
+      <Filter>Source Files\Voting\Methods\Multi Winner\Sequential</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\SequentialMonroe.cpp">
+      <Filter>Source Files\Voting\Methods\Multi Winner\Sequential</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\STV.cpp">
+      <Filter>Source Files\Voting\Methods\Multi Winner\Sequential</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\SingleWinnerMethod.cpp">
+      <Filter>Source Files\Voting\Methods\Single Winner\Base Class</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\ApportionmentAlgorithems.cpp">
       <Filter>Source Files\Voting\Temp</Filter>
     </ClCompile>
-    <ClCompile Include="TemperaryMethods.cpp">
+    <ClCompile Include="Source\TemperaryMethods.cpp">
       <Filter>Source Files\Voting\Temp</Filter>
     </ClCompile>
-    <ClCompile Include="MathFunctions.cpp">
-      <Filter>Resource Files</Filter>
-    </ClCompile>
-    <ClCompile Include="ternaryPlot.cpp">
+    <ClCompile Include="Source\ternaryPlot.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Random.cpp">
+    <ClCompile Include="Source\Barycentric.cpp">
       <Filter>Resource Files</Filter>
     </ClCompile>
-    <ClCompile Include="Outcome.cpp">
-      <Filter>Source Files\Voting\Election\Components\Results</Filter>
+    <ClCompile Include="Source\MathFunctions.cpp">
+      <Filter>Resource Files</Filter>
     </ClCompile>
-    <ClCompile Include="LinearDivisor.cpp">
-      <Filter>Source Files\Voting\Methods\Components\Reweighting Components</Filter>
+    <ClCompile Include="Source\Random.cpp">
+      <Filter>Resource Files</Filter>
     </ClCompile>
-    <ClCompile Include="KPT.cpp">
-      <Filter>Source Files\Voting\Methods\Components\Transformation Components</Filter>
+    <ClCompile Include="Source\Vector2D.cpp">
+      <Filter>Resource Files</Filter>
     </ClCompile>
-    <ClCompile Include="PT.cpp">
-      <Filter>Source Files\Voting\Methods\Components\Transformation Components</Filter>
-    </ClCompile>
-    <ClCompile Include="ScoreSelection.cpp">
-      <Filter>Source Files\Voting\Methods\Components\Selection Components</Filter>
-    </ClCompile>
-    <ClCompile Include="NoTransformation.cpp">
-      <Filter>Source Files\Voting\Methods\Components\Transformation Components</Filter>
-    </ClCompile>
-    <ClCompile Include="SequentialEbert.cpp">
-      <Filter>Source Files\Voting\Methods\Multi Winner\Sequential\Ordering Methods\Derived Ordering</Filter>
-    </ClCompile>
-    <ClCompile Include="MonroeOrdering.cpp">
-      <Filter>Source Files\Voting\Methods\Multi Winner\Sequential\Ordering Methods\Derived Ordering</Filter>
-    </ClCompile>
-    <ClCompile Include="PSIOrdering.cpp">
-      <Filter>Source Files\Voting\Methods\Multi Winner\Sequential\Ordering Methods\Derived Ordering</Filter>
-    </ClCompile>
-    <ClCompile Include="HarmonicPTOrdering.cpp">
-      <Filter>Source Files\Voting\Methods\Multi Winner\Sequential\Ordering Methods\Derived Ordering</Filter>
-    </ClCompile>
-    <ClCompile Include="UnitaryOrdering.cpp">
-      <Filter>Source Files\Voting\Methods\Multi Winner\Sequential\Ordering Methods\Derived Ordering</Filter>
-    </ClCompile>
-    <ClCompile Include="LeastSquaresOrdering.cpp">
-      <Filter>Source Files\Voting\Methods\Multi Winner\Sequential\Ordering Methods\Derived Ordering</Filter>
-    </ClCompile>
-    <ClCompile Include="AllocatedScore.cpp">
-      <Filter>Source Files\Voting\Methods\Multi Winner\Sequential\Component Structured</Filter>
-    </ClCompile>
-    <ClCompile Include="AllocatedSTAR.cpp">
-      <Filter>Source Files\Voting\Methods\Multi Winner\Sequential\Component Structured</Filter>
-    </ClCompile>
-    <ClCompile Include="HareSelection.cpp">
-      <Filter>Source Files\Voting\Methods\Components\Selection Components</Filter>
-    </ClCompile>
-    <ClCompile Include="STARSelection.cpp">
-      <Filter>Source Files\Voting\Methods\Components\Selection Components</Filter>
-    </ClCompile>
-    <ClCompile Include="UnitaryCapping.cpp">
-      <Filter>Source Files\Voting\Methods\Components\Reweighting Components</Filter>
-    </ClCompile>
-    <ClCompile Include="ComponentStructured.cpp">
-      <Filter>Source Files\Voting\Methods\Multi Winner\Sequential\Component Structured\Base Class</Filter>
-    </ClCompile>
-    <ClCompile Include="OrderingMethod.cpp">
-      <Filter>Source Files\Voting\Methods\Multi Winner\Sequential\Ordering Methods\Base Class</Filter>
-    </ClCompile>
-    <ClCompile Include="DerivedOrdering.cpp">
-      <Filter>Source Files\Voting\Methods\Multi Winner\Sequential\Ordering Methods\Derived Ordering\Base Class</Filter>
-    </ClCompile>
-    <ClCompile Include="RRV.cpp">
-      <Filter>Source Files\Voting\Methods\Multi Winner\Sequential\Ordering Methods</Filter>
-    </ClCompile>
-    <ClCompile Include="SPAV.cpp">
-      <Filter>Source Files\Voting\Methods\Multi Winner\Sequential\Ordering Methods</Filter>
-    </ClCompile>
-    <ClCompile Include="SPSV.cpp">
-      <Filter>Source Files\Voting\Methods\Multi Winner\Sequential\Ordering Methods</Filter>
-    </ClCompile>
-    <ClCompile Include="SequentialMethod.cpp">
-      <Filter>Source Files\Voting\Methods\Multi Winner\Sequential\Base Class</Filter>
-    </ClCompile>
-    <ClCompile Include="OptimalMethod.cpp">
-      <Filter>Source Files\Voting\Methods\Multi Winner\Optimal\Base Class</Filter>
-    </ClCompile>
-    <ClCompile Include="VotingMethod.cpp">
-      <Filter>Source Files\Voting\Methods\Base Class</Filter>
-    </ClCompile>
-    <ClCompile Include="SingleWinnerMethod.cpp">
-      <Filter>Source Files\Voting\Methods\Single Winner\Base Class</Filter>
-    </ClCompile>
-    <ClCompile Include="Ebert.cpp">
-      <Filter>Source Files\Voting\Methods\Multi Winner\Optimal</Filter>
-    </ClCompile>
-    <ClCompile Include="Harmonic.cpp">
-      <Filter>Source Files\Voting\Methods\Multi Winner\Optimal</Filter>
-    </ClCompile>
-    <ClCompile Include="HarmonicPT.cpp">
-      <Filter>Source Files\Voting\Methods\Multi Winner\Optimal</Filter>
-    </ClCompile>
-    <ClCompile Include="LeastSquares.cpp">
-      <Filter>Source Files\Voting\Methods\Multi Winner\Optimal</Filter>
-    </ClCompile>
-    <ClCompile Include="PAV.cpp">
-      <Filter>Source Files\Voting\Methods\Multi Winner\Optimal</Filter>
-    </ClCompile>
-    <ClCompile Include="PSI.cpp">
-      <Filter>Source Files\Voting\Methods\Multi Winner\Optimal</Filter>
-    </ClCompile>
-    <ClCompile Include="Unitary.cpp">
-      <Filter>Source Files\Voting\Methods\Multi Winner\Optimal</Filter>
-    </ClCompile>
-    <ClCompile Include="SequentialMonroe.cpp">
-      <Filter>Source Files\Voting\Methods\Multi Winner\Sequential</Filter>
-    </ClCompile>
-    <ClCompile Include="SequentiallySpentScore.cpp">
-      <Filter>Source Files\Voting\Methods\Multi Winner\Sequential\Component Structured</Filter>
-    </ClCompile>
-    <ClCompile Include="PASMAC.cpp">
-      <Filter>Source Files\Voting\Methods\Multi Winner\Optimal</Filter>
-    </ClCompile>
-    <ClCompile Include="PASMACOrdering.cpp">
-      <Filter>Source Files\Voting\Methods\Multi Winner\Sequential\Ordering Methods\Derived Ordering</Filter>
-    </ClCompile>
-    <ClCompile Include="ApportionedScoreVoting.cpp">
-      <Filter>Source Files\Voting\Methods\Multi Winner\Sequential\Component Structured\Non Standard Structure\Apportioned Cardinal Voting</Filter>
-    </ClCompile>
-    <ClCompile Include="ApportionedSTARVoting.cpp">
-      <Filter>Source Files\Voting\Methods\Multi Winner\Sequential\Component Structured\Non Standard Structure\Apportioned Cardinal Voting</Filter>
-    </ClCompile>
-    <ClCompile Include="ReweightedSTAR.cpp">
-      <Filter>Source Files\Voting\Methods\Multi Winner\Sequential\Component Structured\Non Standard Structure\Final Round Structure</Filter>
-    </ClCompile>
-    <ClCompile Include="SequentialMonroe_STAR.cpp">
-      <Filter>Source Files\Voting\Methods\Multi Winner\Sequential\Component Structured\Non Standard Structure\Final Round Structure</Filter>
-    </ClCompile>
-    <ClCompile Include="ApportionedCardinalVoting.cpp">
-      <Filter>Source Files\Voting\Methods\Multi Winner\Sequential\Component Structured\Non Standard Structure\Apportioned Cardinal Voting\Base Class</Filter>
-    </ClCompile>
-    <ClCompile Include="HareRRV.cpp">
-      <Filter>Source Files\Voting\Methods\Multi Winner\Sequential\Component Structured</Filter>
-    </ClCompile>
-    <ClCompile Include="HareSPAV.cpp">
-      <Filter>Source Files\Voting\Methods\Multi Winner\Sequential\Component Structured</Filter>
-    </ClCompile>
-    <ClCompile Include="HareSequentiallySpentScore.cpp">
-      <Filter>Source Files\Voting\Methods\Multi Winner\Sequential\Component Structured</Filter>
-    </ClCompile>
-    <ClCompile Include="DistributedMultiWinner.cpp">
-      <Filter>Source Files\Voting\Methods\Multi Winner\Sequential</Filter>
-    </ClCompile>
-    <ClCompile Include="STV.cpp">
-      <Filter>Source Files\Voting\Methods\Multi Winner\Sequential</Filter>
-    </ClCompile>
-    <ClCompile Include="SchulzeSTV.cpp">
-      <Filter>Source Files\Voting\Methods\Multi Winner\Optimal\Non Standard Optimal</Filter>
-    </ClCompile>
-    <ClCompile Include="CPOSTV.cpp">
-      <Filter>Source Files\Voting\Methods\Multi Winner\Optimal\Non Standard Optimal</Filter>
-    </ClCompile>
-    <ClCompile Include="DirectSmithSetScore.cpp">
-      <Filter>Source Files\Voting\Methods\Multi Winner\Optimal\Non Standard Optimal</Filter>
-    </ClCompile>
-    <ClCompile Include="InderectSmithSetScore.cpp">
-      <Filter>Source Files\Voting\Methods\Multi Winner\Optimal\Non Standard Optimal</Filter>
-    </ClCompile>
-    <ClCompile Include="BlocApproval.cpp">
-      <Filter>Source Files\Voting\Methods\Multi Winner\Sequential\Ordering Methods\Selection Only</Filter>
-    </ClCompile>
-    <ClCompile Include="BlocScore.cpp">
-      <Filter>Source Files\Voting\Methods\Multi Winner\Sequential\Ordering Methods\Selection Only</Filter>
-    </ClCompile>
-    <ClCompile Include="BlocSTAR.cpp">
-      <Filter>Source Files\Voting\Methods\Multi Winner\Sequential\Ordering Methods\Selection Only</Filter>
-    </ClCompile>
-    <ClCompile Include="Cumulative.cpp">
-      <Filter>Source Files\Voting\Methods\Multi Winner\Sequential\Ordering Methods\Selection Only</Filter>
-    </ClCompile>
-    <ClCompile Include="Quadratic.cpp">
-      <Filter>Source Files\Voting\Methods\Multi Winner\Sequential\Ordering Methods\Selection Only</Filter>
-    </ClCompile>
-    <ClCompile Include="SNTV.cpp">
-      <Filter>Source Files\Voting\Methods\Multi Winner\Sequential\Ordering Methods\Selection Only</Filter>
-    </ClCompile>
-    <ClCompile Include="OldProportionalSTAR.cpp">
-      <Filter>Source Files\Voting\Methods\Multi Winner\Sequential\Component Structured</Filter>
-    </ClCompile>
-    <ClCompile Include="SelectionComponent.cpp">
-      <Filter>Source Files\Voting\Methods\Components\Selection Components\Base Class</Filter>
-    </ClCompile>
-    <ClCompile Include="ReweightingComponent.cpp">
-      <Filter>Source Files\Voting\Methods\Components\Reweighting Components\Base Class</Filter>
-    </ClCompile>
-    <ClCompile Include="BlocPlurality.cpp">
-      <Filter>Source Files\Voting\Methods\Multi Winner\Sequential</Filter>
-    </ClCompile>
-    <ClCompile Include="TransformComponent.cpp">
-      <Filter>Source Files\Voting\Methods\Components\Transformation Components\Base Class</Filter>
-    </ClCompile>
-    <ClCompile Include="MultiWinnerMethod.cpp">
-      <Filter>Source Files\Voting\Methods\Multi Winner\Base Class</Filter>
-    </ClCompile>
-    <ClCompile Include="MonroeApproval.cpp">
-      <Filter>Source Files\Voting\Methods\Multi Winner\Optimal</Filter>
-    </ClCompile>
-    <ClCompile Include="MonroeScore.cpp">
-      <Filter>Source Files\Voting\Methods\Multi Winner\Optimal</Filter>
-    </ClCompile>
-    <ClCompile Include="MonroeOrdinal.cpp">
-      <Filter>Source Files\Voting\Methods\Multi Winner\Optimal</Filter>
-    </ClCompile>
-    <ClCompile Include="Ballot.cpp">
-      <Filter>Source Files\Voting\Election\Components\Ballots\Base Class</Filter>
-    </ClCompile>
-    <ClCompile Include="OrdinalBallot.cpp">
-      <Filter>Source Files\Voting\Election\Components\Ballots\Ordinal</Filter>
-    </ClCompile>
-    <ClCompile Include="ApprovalBallot.cpp">
-      <Filter>Source Files\Voting\Election\Components\Ballots\Approval</Filter>
-    </ClCompile>
-    <ClCompile Include="FPTPBallot.cpp">
-      <Filter>Source Files\Voting\Election\Components\Ballots\FPTP</Filter>
-    </ClCompile>
-    <ClCompile Include="CardinalBallot.cpp">
-      <Filter>Source Files\Voting\Election\Components\Ballots\Cardinal</Filter>
-    </ClCompile>
-    <ClCompile Include="CappedCardinal.cpp">
-      <Filter>Source Files\Voting\Election\Components\Ballots\Cardinal\With Additional Information</Filter>
-    </ClCompile>
-    <ClCompile Include="SubtractedCardinal.cpp">
-      <Filter>Source Files\Voting\Election\Components\Ballots\Cardinal\With Additional Information</Filter>
-    </ClCompile>
-    <ClCompile Include="Election.cpp">
-      <Filter>Source Files\Voting\Election\Components</Filter>
-    </ClCompile>
-    <ClCompile Include="Domain.cpp">
-      <Filter>Source Files\Voting\Election\Components\Domain</Filter>
+    <ClCompile Include="Source\ScoreBallot.cpp">
+      <Filter>Source Files\Voting\Election\Components\Ballots\Cardinal\Score</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Barycentric.h">
-      <Filter>Resource Files</Filter>
+    <ClInclude Include="Source\ApprovalBallot.h">
+      <Filter>Source Files\Voting\Election\Components\Ballots\Cardinal\Approval</Filter>
     </ClInclude>
-    <ClInclude Include="Vector2D.h">
-      <Filter>Resource Files</Filter>
-    </ClInclude>
-    <ClInclude Include="ApportionmentAlgorithems.h">
-      <Filter>Source Files\Voting\Temp</Filter>
-    </ClInclude>
-    <ClInclude Include="TemperaryMethods.h">
-      <Filter>Source Files\Voting\Temp</Filter>
-    </ClInclude>
-    <ClInclude Include="MathFunctions.h">
-      <Filter>Resource Files</Filter>
-    </ClInclude>
-    <ClInclude Include="Random.h">
-      <Filter>Resource Files</Filter>
-    </ClInclude>
-    <ClInclude Include="Outcome.h">
-      <Filter>Source Files\Voting\Election\Components\Results</Filter>
-    </ClInclude>
-    <ClInclude Include="LinearDivisor.h">
-      <Filter>Source Files\Voting\Methods\Components\Reweighting Components</Filter>
-    </ClInclude>
-    <ClInclude Include="KPT.h">
-      <Filter>Source Files\Voting\Methods\Components\Transformation Components</Filter>
-    </ClInclude>
-    <ClInclude Include="PT.h">
-      <Filter>Source Files\Voting\Methods\Components\Transformation Components</Filter>
-    </ClInclude>
-    <ClInclude Include="ScoreSelection.h">
-      <Filter>Source Files\Voting\Methods\Components\Selection Components</Filter>
-    </ClInclude>
-    <ClInclude Include="NoTransformation.h">
-      <Filter>Source Files\Voting\Methods\Components\Transformation Components</Filter>
-    </ClInclude>
-    <ClInclude Include="SequentialEbert.h">
-      <Filter>Source Files\Voting\Methods\Multi Winner\Sequential\Ordering Methods\Derived Ordering</Filter>
-    </ClInclude>
-    <ClInclude Include="MonroeOrdering.h">
-      <Filter>Source Files\Voting\Methods\Multi Winner\Sequential\Ordering Methods\Derived Ordering</Filter>
-    </ClInclude>
-    <ClInclude Include="PSIOrdering.h">
-      <Filter>Source Files\Voting\Methods\Multi Winner\Sequential\Ordering Methods\Derived Ordering</Filter>
-    </ClInclude>
-    <ClInclude Include="HarmonicPTOrdering.h">
-      <Filter>Source Files\Voting\Methods\Multi Winner\Sequential\Ordering Methods\Derived Ordering</Filter>
-    </ClInclude>
-    <ClInclude Include="UnitaryOrdering.h">
-      <Filter>Source Files\Voting\Methods\Multi Winner\Sequential\Ordering Methods\Derived Ordering</Filter>
-    </ClInclude>
-    <ClInclude Include="LeastSquaresOrdering.h">
-      <Filter>Source Files\Voting\Methods\Multi Winner\Sequential\Ordering Methods\Derived Ordering</Filter>
-    </ClInclude>
-    <ClInclude Include="AllocatedScore.h">
-      <Filter>Source Files\Voting\Methods\Multi Winner\Sequential\Component Structured</Filter>
-    </ClInclude>
-    <ClInclude Include="AllocatedSTAR.h">
-      <Filter>Source Files\Voting\Methods\Multi Winner\Sequential\Component Structured</Filter>
-    </ClInclude>
-    <ClInclude Include="HareSelection.h">
-      <Filter>Source Files\Voting\Methods\Components\Selection Components</Filter>
-    </ClInclude>
-    <ClInclude Include="STARSelection.h">
-      <Filter>Source Files\Voting\Methods\Components\Selection Components</Filter>
-    </ClInclude>
-    <ClInclude Include="UnitaryCapping.h">
-      <Filter>Source Files\Voting\Methods\Components\Reweighting Components</Filter>
-    </ClInclude>
-    <ClInclude Include="ComponentStructured.h">
-      <Filter>Source Files\Voting\Methods\Multi Winner\Sequential\Component Structured\Base Class</Filter>
-    </ClInclude>
-    <ClInclude Include="OrderingMethod.h">
-      <Filter>Source Files\Voting\Methods\Multi Winner\Sequential\Ordering Methods\Base Class</Filter>
-    </ClInclude>
-    <ClInclude Include="DerivedOrdering.h">
-      <Filter>Source Files\Voting\Methods\Multi Winner\Sequential\Ordering Methods\Derived Ordering\Base Class</Filter>
-    </ClInclude>
-    <ClInclude Include="RRV.h">
-      <Filter>Source Files\Voting\Methods\Multi Winner\Sequential\Ordering Methods</Filter>
-    </ClInclude>
-    <ClInclude Include="SPAV.h">
-      <Filter>Source Files\Voting\Methods\Multi Winner\Sequential\Ordering Methods</Filter>
-    </ClInclude>
-    <ClInclude Include="SPSV.h">
-      <Filter>Source Files\Voting\Methods\Multi Winner\Sequential\Ordering Methods</Filter>
-    </ClInclude>
-    <ClInclude Include="SequentialMethod.h">
-      <Filter>Source Files\Voting\Methods\Multi Winner\Sequential\Base Class</Filter>
-    </ClInclude>
-    <ClInclude Include="OptimalMethod.h">
-      <Filter>Source Files\Voting\Methods\Multi Winner\Optimal\Base Class</Filter>
-    </ClInclude>
-    <ClInclude Include="VotingMethod.h">
-      <Filter>Source Files\Voting\Methods\Base Class</Filter>
-    </ClInclude>
-    <ClInclude Include="SingleWinnerMethod.h">
-      <Filter>Source Files\Voting\Methods\Single Winner\Base Class</Filter>
-    </ClInclude>
-    <ClInclude Include="Ebert.h">
-      <Filter>Source Files\Voting\Methods\Multi Winner\Optimal</Filter>
-    </ClInclude>
-    <ClInclude Include="Harmonic.h">
-      <Filter>Source Files\Voting\Methods\Multi Winner\Optimal</Filter>
-    </ClInclude>
-    <ClInclude Include="HarmonicPT.h">
-      <Filter>Source Files\Voting\Methods\Multi Winner\Optimal</Filter>
-    </ClInclude>
-    <ClInclude Include="LeastSquares.h">
-      <Filter>Source Files\Voting\Methods\Multi Winner\Optimal</Filter>
-    </ClInclude>
-    <ClInclude Include="PAV.h">
-      <Filter>Source Files\Voting\Methods\Multi Winner\Optimal</Filter>
-    </ClInclude>
-    <ClInclude Include="PSI.h">
-      <Filter>Source Files\Voting\Methods\Multi Winner\Optimal</Filter>
-    </ClInclude>
-    <ClInclude Include="Unitary.h">
-      <Filter>Source Files\Voting\Methods\Multi Winner\Optimal</Filter>
-    </ClInclude>
-    <ClInclude Include="SequentialMonroe.h">
-      <Filter>Source Files\Voting\Methods\Multi Winner\Sequential</Filter>
-    </ClInclude>
-    <ClInclude Include="SequentiallySpentScore.h">
-      <Filter>Source Files\Voting\Methods\Multi Winner\Sequential\Component Structured</Filter>
-    </ClInclude>
-    <ClInclude Include="PASMAC.h">
-      <Filter>Source Files\Voting\Methods\Multi Winner\Optimal</Filter>
-    </ClInclude>
-    <ClInclude Include="PASMACOrdering.h">
-      <Filter>Source Files\Voting\Methods\Multi Winner\Sequential\Ordering Methods\Derived Ordering</Filter>
-    </ClInclude>
-    <ClInclude Include="ApportionedScoreVoting.h">
-      <Filter>Source Files\Voting\Methods\Multi Winner\Sequential\Component Structured\Non Standard Structure\Apportioned Cardinal Voting</Filter>
-    </ClInclude>
-    <ClInclude Include="ApportionedSTARVoting.h">
-      <Filter>Source Files\Voting\Methods\Multi Winner\Sequential\Component Structured\Non Standard Structure\Apportioned Cardinal Voting</Filter>
-    </ClInclude>
-    <ClInclude Include="ReweightedSTAR.h">
-      <Filter>Source Files\Voting\Methods\Multi Winner\Sequential\Component Structured\Non Standard Structure\Final Round Structure</Filter>
-    </ClInclude>
-    <ClInclude Include="SequentialMonroe_STAR.h">
-      <Filter>Source Files\Voting\Methods\Multi Winner\Sequential\Component Structured\Non Standard Structure\Final Round Structure</Filter>
-    </ClInclude>
-    <ClInclude Include="ApportionedCardinalVoting.h">
-      <Filter>Source Files\Voting\Methods\Multi Winner\Sequential\Component Structured\Non Standard Structure\Apportioned Cardinal Voting\Base Class</Filter>
-    </ClInclude>
-    <ClInclude Include="HareRRV.h">
-      <Filter>Source Files\Voting\Methods\Multi Winner\Sequential\Component Structured</Filter>
-    </ClInclude>
-    <ClInclude Include="HareSPAV.h">
-      <Filter>Source Files\Voting\Methods\Multi Winner\Sequential\Component Structured</Filter>
-    </ClInclude>
-    <ClInclude Include="HareSequentiallySpentScore.h">
-      <Filter>Source Files\Voting\Methods\Multi Winner\Sequential\Component Structured</Filter>
-    </ClInclude>
-    <ClInclude Include="DistributedMultiWinner.h">
-      <Filter>Source Files\Voting\Methods\Multi Winner\Sequential</Filter>
-    </ClInclude>
-    <ClInclude Include="STV.h">
-      <Filter>Source Files\Voting\Methods\Multi Winner\Sequential</Filter>
-    </ClInclude>
-    <ClInclude Include="SchulzeSTV.h">
-      <Filter>Source Files\Voting\Methods\Multi Winner\Optimal\Non Standard Optimal</Filter>
-    </ClInclude>
-    <ClInclude Include="CPOSTV.h">
-      <Filter>Source Files\Voting\Methods\Multi Winner\Optimal\Non Standard Optimal</Filter>
-    </ClInclude>
-    <ClInclude Include="DirectSmithSetScore.h">
-      <Filter>Source Files\Voting\Methods\Multi Winner\Optimal\Non Standard Optimal</Filter>
-    </ClInclude>
-    <ClInclude Include="InderectSmithSetScore.h">
-      <Filter>Source Files\Voting\Methods\Multi Winner\Optimal\Non Standard Optimal</Filter>
-    </ClInclude>
-    <ClInclude Include="BlocApproval.h">
-      <Filter>Source Files\Voting\Methods\Multi Winner\Sequential\Ordering Methods\Selection Only</Filter>
-    </ClInclude>
-    <ClInclude Include="BlocSource.h">
-      <Filter>Source Files\Voting\Methods\Multi Winner\Sequential\Ordering Methods\Selection Only</Filter>
-    </ClInclude>
-    <ClInclude Include="BlocSTAR.h">
-      <Filter>Source Files\Voting\Methods\Multi Winner\Sequential\Ordering Methods\Selection Only</Filter>
-    </ClInclude>
-    <ClInclude Include="Cumulative.h">
-      <Filter>Source Files\Voting\Methods\Multi Winner\Sequential\Ordering Methods\Selection Only</Filter>
-    </ClInclude>
-    <ClInclude Include="Quadratic.h">
-      <Filter>Source Files\Voting\Methods\Multi Winner\Sequential\Ordering Methods\Selection Only</Filter>
-    </ClInclude>
-    <ClInclude Include="SNTV.h">
-      <Filter>Source Files\Voting\Methods\Multi Winner\Sequential\Ordering Methods\Selection Only</Filter>
-    </ClInclude>
-    <ClInclude Include="OldProportionalSTAR.h">
-      <Filter>Source Files\Voting\Methods\Multi Winner\Sequential\Component Structured</Filter>
-    </ClInclude>
-    <ClInclude Include="SelectionComponent.h">
-      <Filter>Source Files\Voting\Methods\Components\Selection Components\Base Class</Filter>
-    </ClInclude>
-    <ClInclude Include="ReweightingComponent.h">
-      <Filter>Source Files\Voting\Methods\Components\Reweighting Components\Base Class</Filter>
-    </ClInclude>
-    <ClInclude Include="BlocPlurality.h">
-      <Filter>Source Files\Voting\Methods\Multi Winner\Sequential</Filter>
-    </ClInclude>
-    <ClInclude Include="TransformComponent.h">
-      <Filter>Source Files\Voting\Methods\Components\Transformation Components\Base Class</Filter>
-    </ClInclude>
-    <ClInclude Include="MultiWinnerMethod.h">
-      <Filter>Source Files\Voting\Methods\Multi Winner\Base Class</Filter>
-    </ClInclude>
-    <ClInclude Include="MonroeApproval.h">
-      <Filter>Source Files\Voting\Methods\Multi Winner\Optimal</Filter>
-    </ClInclude>
-    <ClInclude Include="MonroeScore.h">
-      <Filter>Source Files\Voting\Methods\Multi Winner\Optimal</Filter>
-    </ClInclude>
-    <ClInclude Include="MonroeOrdinal.h">
-      <Filter>Source Files\Voting\Methods\Multi Winner\Optimal</Filter>
-    </ClInclude>
-    <ClInclude Include="Ballot.h">
+    <ClInclude Include="Source\Ballot.h">
       <Filter>Source Files\Voting\Election\Components\Ballots\Base Class</Filter>
     </ClInclude>
-    <ClInclude Include="OrdinalBallot.h">
+    <ClInclude Include="Source\CappedCardinal.h">
+      <Filter>Source Files\Voting\Election\Components\Ballots\Cardinal\Score\With Additional Information</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\SubtractedCardinal.h">
+      <Filter>Source Files\Voting\Election\Components\Ballots\Cardinal\Score\With Additional Information</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\FPTPBallot.h">
+      <Filter>Source Files\Voting\Election\Components\Ballots\Ordinal\FPTP</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\OrdinalBallot.h">
       <Filter>Source Files\Voting\Election\Components\Ballots\Ordinal</Filter>
     </ClInclude>
-    <ClInclude Include="ApprovalBallot.h">
-      <Filter>Source Files\Voting\Election\Components\Ballots\Approval</Filter>
+    <ClInclude Include="Source\Domain.h">
+      <Filter>Source Files\Voting\Election\Components\Domain</Filter>
     </ClInclude>
-    <ClInclude Include="FPTPBallot.h">
-      <Filter>Source Files\Voting\Election\Components\Ballots\FPTP</Filter>
+    <ClInclude Include="Source\Outcome.h">
+      <Filter>Source Files\Voting\Election\Components\Results</Filter>
     </ClInclude>
-    <ClInclude Include="CardinalBallot.h">
-      <Filter>Source Files\Voting\Election\Components\Ballots\Cardinal</Filter>
-    </ClInclude>
-    <ClInclude Include="CappedCardinal.h">
-      <Filter>Source Files\Voting\Election\Components\Ballots\Cardinal\With Additional Information</Filter>
-    </ClInclude>
-    <ClInclude Include="SubtractedCardinal.h">
-      <Filter>Source Files\Voting\Election\Components\Ballots\Cardinal\With Additional Information</Filter>
-    </ClInclude>
-    <ClInclude Include="Election.h">
+    <ClInclude Include="Source\Election.h">
       <Filter>Source Files\Voting\Election\Components</Filter>
     </ClInclude>
-    <ClInclude Include="Domain.h">
-      <Filter>Source Files\Voting\Election\Components\Domain</Filter>
+    <ClInclude Include="Source\VotingMethod.h">
+      <Filter>Source Files\Voting\Methods\Base Class</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\ReweightingComponent.h">
+      <Filter>Source Files\Voting\Methods\Components\Reweighting Components\Base Class</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\LinearDivisor.h">
+      <Filter>Source Files\Voting\Methods\Components\Reweighting Components</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\UnitaryCapping.h">
+      <Filter>Source Files\Voting\Methods\Components\Reweighting Components</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\SelectionComponent.h">
+      <Filter>Source Files\Voting\Methods\Components\Selection Components\Base Class</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\HareSelection.h">
+      <Filter>Source Files\Voting\Methods\Components\Selection Components</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\ScoreSelection.h">
+      <Filter>Source Files\Voting\Methods\Components\Selection Components</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\STARSelection.h">
+      <Filter>Source Files\Voting\Methods\Components\Selection Components</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\TransformComponent.h">
+      <Filter>Source Files\Voting\Methods\Components\Transformation Components\Base Class</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\KPT.h">
+      <Filter>Source Files\Voting\Methods\Components\Transformation Components</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\NoTransformation.h">
+      <Filter>Source Files\Voting\Methods\Components\Transformation Components</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\PT.h">
+      <Filter>Source Files\Voting\Methods\Components\Transformation Components</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\MultiWinnerMethod.h">
+      <Filter>Source Files\Voting\Methods\Multi Winner\Base Class</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\OptimalMethod.h">
+      <Filter>Source Files\Voting\Methods\Multi Winner\Optimal\Base Class</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\CPOSTV.h">
+      <Filter>Source Files\Voting\Methods\Multi Winner\Optimal\Non Standard Optimal</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\DirectSmithSetScore.h">
+      <Filter>Source Files\Voting\Methods\Multi Winner\Optimal\Non Standard Optimal</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\InderectSmithSetScore.h">
+      <Filter>Source Files\Voting\Methods\Multi Winner\Optimal\Non Standard Optimal</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\SchulzeSTV.h">
+      <Filter>Source Files\Voting\Methods\Multi Winner\Optimal\Non Standard Optimal</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Ebert.h">
+      <Filter>Source Files\Voting\Methods\Multi Winner\Optimal</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Harmonic.h">
+      <Filter>Source Files\Voting\Methods\Multi Winner\Optimal</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\HarmonicPT.h">
+      <Filter>Source Files\Voting\Methods\Multi Winner\Optimal</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\LeastSquares.h">
+      <Filter>Source Files\Voting\Methods\Multi Winner\Optimal</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\MonroeApproval.h">
+      <Filter>Source Files\Voting\Methods\Multi Winner\Optimal</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\MonroeOrdinal.h">
+      <Filter>Source Files\Voting\Methods\Multi Winner\Optimal</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\MonroeScore.h">
+      <Filter>Source Files\Voting\Methods\Multi Winner\Optimal</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\PASMAC.h">
+      <Filter>Source Files\Voting\Methods\Multi Winner\Optimal</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\PAV.h">
+      <Filter>Source Files\Voting\Methods\Multi Winner\Optimal</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\PSI.h">
+      <Filter>Source Files\Voting\Methods\Multi Winner\Optimal</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Unitary.h">
+      <Filter>Source Files\Voting\Methods\Multi Winner\Optimal</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\SequentialMethod.h">
+      <Filter>Source Files\Voting\Methods\Multi Winner\Sequential\Base Class</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\ComponentStructured.h">
+      <Filter>Source Files\Voting\Methods\Multi Winner\Sequential\Component Structured\Base Class</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\ApportionedCardinalVoting.h">
+      <Filter>Source Files\Voting\Methods\Multi Winner\Sequential\Component Structured\Non Standard Structure\Apportioned Cardinal Voting\Base Class</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\AllocatedScore.h">
+      <Filter>Source Files\Voting\Methods\Multi Winner\Sequential\Component Structured</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\AllocatedSTAR.h">
+      <Filter>Source Files\Voting\Methods\Multi Winner\Sequential\Component Structured</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\ApportionedScoreVoting.h">
+      <Filter>Source Files\Voting\Methods\Multi Winner\Sequential\Component Structured\Non Standard Structure\Apportioned Cardinal Voting</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\ApportionedSTARVoting.h">
+      <Filter>Source Files\Voting\Methods\Multi Winner\Sequential\Component Structured\Non Standard Structure\Apportioned Cardinal Voting</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\ReweightedSTAR.h">
+      <Filter>Source Files\Voting\Methods\Multi Winner\Sequential\Component Structured\Non Standard Structure\Final Round Structure</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\SequentialMonroe_STAR.h">
+      <Filter>Source Files\Voting\Methods\Multi Winner\Sequential\Component Structured\Non Standard Structure\Final Round Structure</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\HareRRV.h">
+      <Filter>Source Files\Voting\Methods\Multi Winner\Sequential\Component Structured</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\HareSequentiallySpentScore.h">
+      <Filter>Source Files\Voting\Methods\Multi Winner\Sequential\Component Structured</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\HareSPAV.h">
+      <Filter>Source Files\Voting\Methods\Multi Winner\Sequential\Component Structured</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\OldProportionalSTAR.h">
+      <Filter>Source Files\Voting\Methods\Multi Winner\Sequential\Component Structured</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\SequentiallySpentScore.h">
+      <Filter>Source Files\Voting\Methods\Multi Winner\Sequential\Component Structured</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\OrderingMethod.h">
+      <Filter>Source Files\Voting\Methods\Multi Winner\Sequential\Ordering Methods\Base Class</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\DerivedOrdering.h">
+      <Filter>Source Files\Voting\Methods\Multi Winner\Sequential\Ordering Methods\Derived Ordering\Base Class</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\HarmonicPTOrdering.h">
+      <Filter>Source Files\Voting\Methods\Multi Winner\Sequential\Ordering Methods\Derived Ordering</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\LeastSquaresOrdering.h">
+      <Filter>Source Files\Voting\Methods\Multi Winner\Sequential\Ordering Methods\Derived Ordering</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\MonroeOrdering.h">
+      <Filter>Source Files\Voting\Methods\Multi Winner\Sequential\Ordering Methods\Derived Ordering</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\PASMACOrdering.h">
+      <Filter>Source Files\Voting\Methods\Multi Winner\Sequential\Ordering Methods\Derived Ordering</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\PSIOrdering.h">
+      <Filter>Source Files\Voting\Methods\Multi Winner\Sequential\Ordering Methods\Derived Ordering</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\SequentialEbert.h">
+      <Filter>Source Files\Voting\Methods\Multi Winner\Sequential\Ordering Methods\Derived Ordering</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\UnitaryOrdering.h">
+      <Filter>Source Files\Voting\Methods\Multi Winner\Sequential\Ordering Methods\Derived Ordering</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\BlocApproval.h">
+      <Filter>Source Files\Voting\Methods\Multi Winner\Sequential\Ordering Methods\Selection Only</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\BlocSource.h">
+      <Filter>Source Files\Voting\Methods\Multi Winner\Sequential\Ordering Methods\Selection Only</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\BlocSTAR.h">
+      <Filter>Source Files\Voting\Methods\Multi Winner\Sequential\Ordering Methods\Selection Only</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Cumulative.h">
+      <Filter>Source Files\Voting\Methods\Multi Winner\Sequential\Ordering Methods\Selection Only</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Quadratic.h">
+      <Filter>Source Files\Voting\Methods\Multi Winner\Sequential\Ordering Methods\Selection Only</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\SNTV.h">
+      <Filter>Source Files\Voting\Methods\Multi Winner\Sequential\Ordering Methods\Selection Only</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\RRV.h">
+      <Filter>Source Files\Voting\Methods\Multi Winner\Sequential\Ordering Methods</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\SPSV.h">
+      <Filter>Source Files\Voting\Methods\Multi Winner\Sequential\Ordering Methods</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\SPAV.h">
+      <Filter>Source Files\Voting\Methods\Multi Winner\Sequential\Ordering Methods</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\BlocPlurality.h">
+      <Filter>Source Files\Voting\Methods\Multi Winner\Sequential</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\DistributedMultiWinner.h">
+      <Filter>Source Files\Voting\Methods\Multi Winner\Sequential</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\SequentialMonroe.h">
+      <Filter>Source Files\Voting\Methods\Multi Winner\Sequential</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\STV.h">
+      <Filter>Source Files\Voting\Methods\Multi Winner\Sequential</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\SingleWinnerMethod.h">
+      <Filter>Source Files\Voting\Methods\Single Winner\Base Class</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\ApportionmentAlgorithems.h">
+      <Filter>Source Files\Voting\Temp</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\TemperaryMethods.h">
+      <Filter>Source Files\Voting\Temp</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Barycentric.h">
+      <Filter>Resource Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\MathFunctions.h">
+      <Filter>Resource Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Random.h">
+      <Filter>Resource Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Vector2D.h">
+      <Filter>Resource Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\ScoreBallot.h">
+      <Filter>Source Files\Voting\Election\Components\Ballots\Cardinal\Score</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

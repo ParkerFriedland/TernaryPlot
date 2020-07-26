@@ -5,7 +5,7 @@ SelectionComponent::SelectionComponent()
 
 }
 
-unsigned SelectionComponent::SelectWinner(const std::vector<CardinalBallot> &ballots, unsigned seats)
+unsigned SelectionComponent::SelectWinner(const std::vector<ScoreBallot> &ballots, unsigned seats)
 {
 	return 0;
 }
