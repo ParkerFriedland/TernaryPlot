@@ -1,0 +1,11 @@
+double* Add2D(double a[2], double b[2], double result[2]);
+double* Sub2D(double a[2], double b[2], double result[2]);
+double* Mid2D(double a[2], double b[2], double result[2]);
+double* Scale2D(double a[2], double b, double result[2]);
+double* Div2D(double a[2], double b, double result[2]);
+double Dot2D(double a[2], double b[2]);
+double SqDist2D(double a[2]);
+double Dist2D(double a[2]);
+double* Normalize2D(double a[2], double result[2]);
+double* Rot90_2D(double a[2], double result[2]);
+double* GetNormal2D(double a[2], double result[2]);
