@@ -100,7 +100,7 @@ int doubleToColor(double x)
 		return 255;
 	if (x >= 1)
 		return 0;
-	return 255 - (int)(sqrt(x) * 255.0);
+	return 255 - (int)(sqrt(x) * 255.0); // Doing this makes the colors look more neon-ish and less boring
 }
 
 int seatsToColor(int seats, int numSeats)
