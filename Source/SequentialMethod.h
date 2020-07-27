@@ -7,10 +7,13 @@ class SequentialMethod : public MultiWinnerMethod<BallotType>
 {
 public:
 	SequentialMethod(unsigned seats = 2, bool oneSeatPerWinner = false);
-	Outcome &CalculateResults(std::vector<BallotType> &ballots, unsigned seats, bool oneSeatPerWinner) override;
+	void CalculateResults(
+		std::vector<BallotType> &ballots, Domain &domain, Outcome &results, 
+		unsigned seats, bool oneSeatPerWinner) override;
 
 	virtual unsigned CalculateNextWinner(
-		std::vector<BallotType> &ballots, const Outcome &winners, unsigned seats, bool oneSeatPerWinner) = 0;
+		std::vector<BallotType> &ballots, const Domain &domain, const Outcome &winners, 
+		unsigned seats, bool oneSeatPerWinner) = 0;
 
 private:
 	Outcome results;
@@ -24,11 +27,10 @@ template<typename BallotType>
 SequentialMethod<BallotType>::SequentialMethod(unsigned seats, bool oneSeatPerWinner) : results(0), MultiWinnerMethod(seats, oneSeatPerWinner) {}
 
 template<typename BallotType>
-Outcome &SequentialMethod<BallotType>::CalculateResults(std::vector<BallotType> &ballots, unsigned seats, bool oneSeatPerWinner)
+void SequentialMethod<BallotType>::CalculateResults(
+	std::vector<BallotType> &ballots, Domain &domain, Outcome &results,
+	unsigned seats, bool oneSeatPerWinner)
 {
-	results = Outcome(ballots[0].GetNumCandidates());
-
 	for (unsigned i = 0; i < seats; ++i)
-		results.AddSeat(CalculateNextWinner(ballots, results, seats, oneSeatPerWinner));
-	return results;
+		results.AddSeat(CalculateNextWinner(ballots, domain, results, seats, oneSeatPerWinner));
 }

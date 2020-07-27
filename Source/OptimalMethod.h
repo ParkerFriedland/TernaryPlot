@@ -14,8 +14,12 @@ public:
 	void SetPossibleOutcomes(std::vector<Outcome> &possibleOutcomes);
 	std::vector<Outcome> &GetPossibleOutcomes();
 
-	Outcome &CalculateResults(std::vector<BallotType> &ballots, unsigned seats, bool oneSeatPerWinner) override;
-	Outcome &CalculateResults(std::vector<BallotType> &ballots, const std::vector<Outcome> &possibleOutcomes);
+	void CalculateResults(
+		std::vector<BallotType> &ballots, Domain &domain, Outcome &results,
+		unsigned seats, bool oneSeatPerWinner) override;
+	void CalculateResults(
+		std::vector<BallotType> &ballots, const Domain &domain, Outcome &results, 
+		const std::vector<Outcome> &possibleOutcomes);
 	virtual QualityValue CalculateOutcomeQuality(const std::vector<BallotType> &ballots, const Outcome &outcome) = 0;
 
 private:
@@ -85,16 +89,21 @@ std::vector<Outcome> &OptimalMethod<BallotType, QualityValue>::GetPossibleOutcom
 }
 
 template<typename BallotType, typename QualityValue>
-Outcome &OptimalMethod<BallotType, QualityValue>::CalculateResults(std::vector<BallotType> &ballots, unsigned seats, bool oneSeatPerWinner)
+void OptimalMethod<BallotType, QualityValue>::CalculateResults(
+	std::vector<BallotType> &ballots, Domain &domain, Outcome &results,
+
+	unsigned seats, bool oneSeatPerWinner)
 {
 	if (_isOutcomeListDirty)
 		SetPosssibleOutcomes(GetNumSeats(), IsOneSeatPerWinner());
 
-	return CalculateResults(ballots, *_outcomeList);
+	return CalculateResults(ballots, domain, results, *_outcomeList);
 }
 
 template<typename BallotType, typename QualityValue>
-Outcome &OptimalMethod<BallotType, QualityValue>::CalculateResults(std::vector<BallotType> &ballots, const std::vector<Outcome> &possibleOutcomes)
+void OptimalMethod<BallotType, QualityValue>::CalculateResults(
+	std::vector<BallotType> &ballots, const Domain &domain, Outcome &results,
+	const std::vector<Outcome> &possibleOutcomes)
 {
 	QualityValue maxQuality = CalculateOutcomeQuality(ballots, possibleOutcomes[0]);
 	int best = 0;
@@ -109,9 +118,8 @@ Outcome &OptimalMethod<BallotType, QualityValue>::CalculateResults(std::vector<B
 		}
 	}
 
-	Outcome results = Outcome(possibleOutcomes[best]);
+	results = possibleOutcomes[best];
 	results.SetTieFlag(tie);
-	return results;
 }
 
 template<typename BallotType, typename QualityValue>

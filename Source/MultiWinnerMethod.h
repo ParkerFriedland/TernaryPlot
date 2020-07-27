@@ -14,10 +14,13 @@ public:
 	void SetOneSeatPerWinner(bool oneSeatPerWinner);
 	bool IsOneSeatPerWinner();
 
-	Outcome &CalculateResults(std::vector<BallotType> &ballots) override;
+	void CalculateResults(
+		std::vector<BallotType> &ballots, Domain &domain, Outcome &results) override;
 
 protected:
-	virtual Outcome &CalculateResults(std::vector<BallotType> &ballots, unsigned seats, bool oneSeatPerWinner) = 0;
+	virtual void CalculateResults(
+		std::vector<BallotType> &ballots, Domain &domain, Outcome &results, 
+		unsigned seats, bool oneSeatPerWinner) = 0;
 
 	virtual void OnNumSeatsChange();
 	virtual void OnNumSeatsPerWinnerChange();
@@ -62,9 +65,10 @@ bool MultiWinnerMethod<BallotType>::IsOneSeatPerWinner()
 }
 
 template<typename BallotType>
-Outcome &MultiWinnerMethod<BallotType>::CalculateResults(std::vector<BallotType> &ballots)
+void MultiWinnerMethod<BallotType>::CalculateResults(
+	std::vector<BallotType> &ballots, Domain &domain, Outcome &results)
 {
-	return CalculateResults(ballots, _numSeats, _oneSeatPerWinner);
+	CalculateResults(ballots, domain, results, _numSeats, _oneSeatPerWinner);
 }
 
 template<typename BallotType>

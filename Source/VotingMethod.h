@@ -7,5 +7,5 @@ template<typename BallotType = ScoreBallot>
 class VotingMethod
 {
 public:
-	virtual Outcome &CalculateResults(std::vector<BallotType> &ballots) = 0;
+	virtual void CalculateResults(std::vector<BallotType> &ballots, Domain &domain, Outcome &results) = 0;
 };
