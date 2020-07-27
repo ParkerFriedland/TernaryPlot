@@ -77,14 +77,14 @@ const std::vector<double> &ScoreBallot::GetScores() const
 	return _scores;
 }
 
-double ScoreBallot::NextHighestScore(double &score) const
+unsigned ScoreBallot::NextHighestScore(double &score, const Outcome &results) const
 {
 	double max = 0.0;
-	for (int i = 0; i < _scores.size(); ++i)
-		if (_scores[i] > max && _scores[i] < score)
-			max = _scores[i];
-	
-	double gap = max - score;
+	unsigned i = 0;
+	while(i < _scores.size())
+		if (_scores[i] < score && _scores[i] > max && results.GetNumSeats(i))
+			max = _scores[i++];
+
 	score = max;
-	return gap;
+	return results.GetNumSeats(i);
 }

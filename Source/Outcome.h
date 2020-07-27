@@ -13,12 +13,12 @@ public:
 	void ClearSeats();
 
 	const std::vector<unsigned> &GetSeats();
-	unsigned GetNumSeats();
-	unsigned GetNumSeats(unsigned candidate);
-	unsigned GetNumCandidates();
+	unsigned GetNumSeats() const;
+	unsigned GetNumSeats(unsigned candidate) const;
+	unsigned GetNumCandidates() const;
 
 	void SetTieFlag(bool flag);
-	bool GetTieFlag();
+	bool GetTieFlag() const;
 
 private:
 	std::vector<unsigned> _seats;

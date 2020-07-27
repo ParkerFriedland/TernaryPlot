@@ -8,11 +8,10 @@ double Harmonic::CalculateOutcomeQuality(const std::vector<ScoreBallot> &ballots
 
 	for (ScoreBallot ballot : ballots)
 	{
-		// There's probably a more efficiant way of calculating this.
-		double gap, threashold = 1.0;
-		while((gap = ballot.NextHighestScore(threashold)))
-			for (double numApprovals = ballot.GetTotalRawScore(); numApprovals > threashold; --numApprovals)
-				quality += gap / numApprovals;
+		unsigned currWinnerSeats;
+		for(double score = 1.0, divisor = 0.0; score; currWinnerSeats = ballot.NextHighestScore(score, outcome))
+			for(unsigned seat = 0; seat < currWinnerSeats; ++seat)
+				quality += score / ++divisor;
 	}
 
 	return quality;

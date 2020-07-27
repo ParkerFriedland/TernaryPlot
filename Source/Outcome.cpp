@@ -25,7 +25,7 @@ const std::vector<unsigned> &Outcome::GetSeats()
 	return _seats;
 }
 
-unsigned Outcome::GetNumSeats()
+unsigned Outcome::GetNumSeats() const
 {
 	unsigned sum = 0;
 	for (unsigned seatNum : _seats)
@@ -33,12 +33,12 @@ unsigned Outcome::GetNumSeats()
 	return sum;
 }
 
-unsigned Outcome::GetNumSeats(unsigned candidate)
+unsigned Outcome::GetNumSeats(unsigned candidate) const
 {
 	return _seats[candidate];
 }
 
-unsigned Outcome::GetNumCandidates()
+unsigned Outcome::GetNumCandidates() const
 {
 	return _seats.size();
 }
@@ -48,7 +48,7 @@ void Outcome::SetTieFlag(bool flag)
 	_tie = flag;
 }
 
-bool Outcome::GetTieFlag()
+bool Outcome::GetTieFlag() const
 {
 	return _tie;
 }

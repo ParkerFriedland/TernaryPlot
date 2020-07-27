@@ -7,8 +7,13 @@ double PAV::CalculateOutcomeQuality(const std::vector<ApprovalBallot> &ballots, 
 	double quality = 0;
 
 	for (ApprovalBallot ballot : ballots)
-		for (double numApprovals = ballot.GetNumApprovals(); numApprovals > 0; --numApprovals)
-			quality += 1 / numApprovals;
+	{
+		double divisor = 0.0;
+
+		for (unsigned candidate = 0; candidate < outcome.GetNumCandidates(); ++candidate)
+			for (unsigned seats = 0; seats < ballot.GetOutcomeApprovalSum(outcome); ++seats)
+				quality += 1 / ++divisor;
+	}
 
 	return quality;
 }

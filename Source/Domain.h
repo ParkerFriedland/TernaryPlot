@@ -8,6 +8,8 @@ public:
 	Domain(unsigned candidates);
 	Domain(std::vector<bool> &domain);
 
+	bool operator[](unsigned candidate) const;
+
 	void Include(unsigned candidate);
 	void Exclude(unsigned candidate);
 	void IncludeAll();

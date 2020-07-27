@@ -19,16 +19,17 @@ void ApprovalBallot::SetApproval(bool approval, unsigned candidate)
 	_approvals[candidate] = approval;
 }
 
-double ApprovalBallot::IsApproved(unsigned candidate) const
+bool ApprovalBallot::IsApproved(unsigned candidate) const
 {
 	return _approvals[candidate];
 }
 
-double ApprovalBallot::GetNumApprovals() const
+unsigned ApprovalBallot::GetOutcomeApprovalSum(const Outcome &result) const
 {
-	double sum = 0;
+	unsigned sum = 0;
 	for (int i = 0; i < _approvals.size(); ++i)
-		sum += _approvals[i];
+		if(_approvals[i])
+			sum += result.GetNumSeats(i);
 
 	return sum;
 }

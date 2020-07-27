@@ -7,6 +7,11 @@ Domain::Domain(unsigned candidates) : _domain(std::vector<bool>(candidates))
 
 Domain::Domain(std::vector<bool> &domain) : _domain(domain) {}
 
+bool Domain::operator[](unsigned candidate) const
+{
+	return _domain[candidate];
+}
+
 void Domain::Include(unsigned candidate)
 {
 	_domain[candidate] = true;

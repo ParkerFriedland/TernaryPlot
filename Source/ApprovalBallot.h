@@ -1,6 +1,7 @@
 #include <vector>
 #include "Random.h"
 #include "Ballot.h"
+#include "Outcome.h"
 
 #pragma once
 
@@ -12,8 +13,8 @@ public:
 	void RandomizePrefrences();
 
 	void SetApproval(bool approval, unsigned candidate);
-	double IsApproved(unsigned candidate) const;
-	double GetNumApprovals() const; // For distributed vote and methods related to culmutive voting
+	bool IsApproved(unsigned candidate) const;
+	unsigned GetOutcomeApprovalSum(const Outcome &results) const; // for PAV
 	double GetWeightedApproval(unsigned candidate) const;
 	const std::vector<bool> &GetApprovals() const;
 

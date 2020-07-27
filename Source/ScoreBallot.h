@@ -1,6 +1,7 @@
 #include <vector>
 #include "Random.h"
 #include "Ballot.h"
+#include "Outcome.h"
 
 #pragma once
 
@@ -18,7 +19,7 @@ public:
 	const std::vector<double> &GetScores() const;
 	//std::vector<ApprovalBallot> KPT(); will add once I add ApprovalBallot class
 
-	double NextHighestScore(double &score) const; // For harmonic voting.
+	unsigned NextHighestScore(double &score, const Outcome &results) const; // For harmonic voting.
 
 	// For sequentaily spent score. 
 	// Would like to factor out of this class since only one voting method uses these methods.
