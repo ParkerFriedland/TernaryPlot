@@ -58,13 +58,14 @@ unsigned Domain::GetNumCandidates()
 	return _domain.size();
 }
 
-bool Domain::NextInDomain(unsigned &candidate)
+bool Domain::NextInDomain(unsigned &candidate) const
 {
 	do
 	{
 		if (++candidate >= _domain.size())
 			return false;
-	} while (!_domain[candidate]);
+	} 
+	while (!_domain[candidate]);
 
 	return true;
 }

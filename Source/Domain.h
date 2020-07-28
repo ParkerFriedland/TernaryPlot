@@ -20,7 +20,7 @@ public:
 	unsigned GetNumInDomain();
 	unsigned GetNumCandidates();
 
-	bool NextInDomain(unsigned &candidate);
+	bool NextInDomain(unsigned &candidate) const;
 
 private:
 	std::vector<bool> _domain;
