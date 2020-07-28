@@ -8,9 +8,10 @@ double Harmonic::CalculateOutcomeQuality(const std::vector<ScoreBallot> &ballots
 
 	for (ScoreBallot ballot : ballots)
 	{
+		double score = 1.0, divisor = 0.0;
 		unsigned currWinnerSeats;
-		for(double score = 1.0, divisor = 0.0; score; currWinnerSeats = ballot.NextHighestScore(score, outcome))
-			for(unsigned seat = 0; seat < currWinnerSeats; ++seat)
+		while ((currWinnerSeats = ballot.NextHighestScore(score, outcome)))
+			for (unsigned seat = 0; seat < currWinnerSeats; ++seat)
 				quality += score / ++divisor;
 	}
 

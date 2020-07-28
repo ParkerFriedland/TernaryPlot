@@ -1,8 +1,8 @@
 #include "ReweightingComponent.h"
 
-class UnitaryCapping : public ReweightingComponent
+class UnitarySubtracting : public ReweightingComponent
 {
 public:
-	UnitaryCapping();
+	UnitarySubtracting();
 	void ReweightBallots(std::vector<ScoreBallot> &ballots, unsigned lastWinner) override;
 };

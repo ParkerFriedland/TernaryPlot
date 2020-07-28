@@ -2,8 +2,8 @@
 
 #pragma once
 
-class KPT
+class KPT : public TransformComponent
 {
 public:
-	std::vector<ScoreBallot> TransformBallots(std::vector<ScoreBallot> ballots);
+	std::vector<ScoreBallot> TransformBallots(std::vector<ScoreBallot> ballots) override;
 };

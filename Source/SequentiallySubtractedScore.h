@@ -1,16 +1,16 @@
 #include "ComponentStructured.h"
 #include "NoTransformation.h"
 #include "ScoreSelection.h"
-#include "UnitaryCapping.h"
+#include "UnitarySubtracting.h"
 
 
-class SequentiallySpentScore : public ComponentStructured
+class SequentiallySubtractedScore : public ComponentStructured
 {
 public:
-	SequentiallySpentScore();
+	SequentiallySubtractedScore();
 
 private:
 	NoTransform _trans;
 	ScoreSelection _select;
-	UnitaryCapping _reweight;
+	UnitarySubtracting _reweight;
 };

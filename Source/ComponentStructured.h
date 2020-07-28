@@ -15,7 +15,7 @@ public:
 	unsigned CalculateNextWinner(std::vector<ScoreBallot> &ballots, const Domain &domain, unsigned seats);
 	
 private:
-	TransformComponent *_transform;
-	SelectionComponent *_selection;
+	TransformComponent *_trans;
+	SelectionComponent *_select;
 	ReweightingComponent *_reweight;
 };

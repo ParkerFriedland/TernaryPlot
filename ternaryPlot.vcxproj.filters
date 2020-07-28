@@ -143,11 +143,11 @@
     <Filter Include="Voting\Ternary Plot">
       <UniqueIdentifier>{6040fcbf-cef5-4826-9a7b-c4a364b17a6d}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Utilities">
-      <UniqueIdentifier>{986239f0-1ba4-4acb-8aa8-033187502f84}</UniqueIdentifier>
-    </Filter>
     <Filter Include="Voting\Criterion Checker %28emty for now%29">
       <UniqueIdentifier>{72f4d245-2f8a-4d16-a8f7-56dd11af59f9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Math">
+      <UniqueIdentifier>{986239f0-1ba4-4acb-8aa8-033187502f84}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -383,22 +383,28 @@
       <Filter>Voting\Voting Methods\Temp</Filter>
     </ClCompile>
     <ClCompile Include="Source\Barycentric.cpp">
-      <Filter>Utilities</Filter>
+      <Filter>Math</Filter>
     </ClCompile>
     <ClCompile Include="Source\MathFunctions.cpp">
-      <Filter>Utilities</Filter>
+      <Filter>Math</Filter>
     </ClCompile>
     <ClCompile Include="Source\Random.cpp">
-      <Filter>Utilities</Filter>
+      <Filter>Math</Filter>
     </ClCompile>
     <ClCompile Include="Source\Vector2D.cpp">
-      <Filter>Utilities</Filter>
+      <Filter>Math</Filter>
     </ClCompile>
     <ClCompile Include="Source\ScoreBallot.cpp">
       <Filter>Voting\Voting Methods\Election\Components\Ballots\Cardinal\Score</Filter>
     </ClCompile>
     <ClCompile Include="Source\ternaryPlot.cpp">
       <Filter>Voting\Ternary Plot</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\UnitarySubtracting.cpp">
+      <Filter>Voting\Voting Methods\Methods\Components\Reweighting Components</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\SequentiallySubtractedScore.cpp">
+      <Filter>Voting\Voting Methods\Methods\Multi Winner\Sequential\Component Structured</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -634,19 +640,25 @@
       <Filter>Voting\Voting Methods\Temp</Filter>
     </ClInclude>
     <ClInclude Include="Source\Barycentric.h">
-      <Filter>Utilities</Filter>
+      <Filter>Math</Filter>
     </ClInclude>
     <ClInclude Include="Source\MathFunctions.h">
-      <Filter>Utilities</Filter>
+      <Filter>Math</Filter>
     </ClInclude>
     <ClInclude Include="Source\Random.h">
-      <Filter>Utilities</Filter>
+      <Filter>Math</Filter>
     </ClInclude>
     <ClInclude Include="Source\Vector2D.h">
-      <Filter>Utilities</Filter>
+      <Filter>Math</Filter>
     </ClInclude>
     <ClInclude Include="Source\ScoreBallot.h">
       <Filter>Voting\Voting Methods\Election\Components\Ballots\Cardinal\Score</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\UnitarySubtracting.h">
+      <Filter>Voting\Voting Methods\Methods\Components\Reweighting Components</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\SequentiallySubtractedScore.h">
+      <Filter>Voting\Voting Methods\Methods\Multi Winner\Sequential\Component Structured</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

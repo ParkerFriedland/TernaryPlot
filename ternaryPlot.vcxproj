@@ -163,6 +163,7 @@
     <ClCompile Include="Source\SelectionComponent.cpp" />
     <ClCompile Include="Source\SequentialEbert.cpp" />
     <ClCompile Include="Source\SequentiallySpentScore.cpp" />
+    <ClCompile Include="Source\SequentiallySubtractedScore.cpp" />
     <ClCompile Include="Source\SequentialMethod.cpp" />
     <ClCompile Include="Source\SequentialMonroe.cpp" />
     <ClCompile Include="Source\SequentialMonroe_STAR.cpp" />
@@ -179,6 +180,7 @@
     <ClCompile Include="Source\Unitary.cpp" />
     <ClCompile Include="Source\UnitaryCapping.cpp" />
     <ClCompile Include="Source\UnitaryOrdering.cpp" />
+    <ClCompile Include="Source\UnitarySubtracting.cpp" />
     <ClCompile Include="Source\Vector2D.cpp" />
     <ClCompile Include="Source\VotingMethod.cpp" />
   </ItemGroup>
@@ -248,6 +250,7 @@
     <ClInclude Include="Source\SelectionComponent.h" />
     <ClInclude Include="Source\SequentialEbert.h" />
     <ClInclude Include="Source\SequentiallySpentScore.h" />
+    <ClInclude Include="Source\SequentiallySubtractedScore.h" />
     <ClInclude Include="Source\SequentialMethod.h" />
     <ClInclude Include="Source\SequentialMonroe.h" />
     <ClInclude Include="Source\SequentialMonroe_STAR.h" />
@@ -263,6 +266,7 @@
     <ClInclude Include="Source\Unitary.h" />
     <ClInclude Include="Source\UnitaryCapping.h" />
     <ClInclude Include="Source\UnitaryOrdering.h" />
+    <ClInclude Include="Source\UnitarySubtracting.h" />
     <ClInclude Include="Source\Vector2D.h" />
     <ClInclude Include="Source\VotingMethod.h" />
   </ItemGroup>

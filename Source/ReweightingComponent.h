@@ -1,5 +1,7 @@
 #include "ScoreBallot.h"
 
+#pragma once
+
 class ReweightingComponent
 {
 public:

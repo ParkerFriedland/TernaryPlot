@@ -86,5 +86,5 @@ unsigned ScoreBallot::NextHighestScore(double &score, const Outcome &results) co
 			max = _scores[i++];
 
 	score = max;
-	return results.GetNumSeats(i);
+	return max ? results.GetNumSeats(i) : 0;
 }
