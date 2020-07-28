@@ -149,11 +149,8 @@
     <Filter Include="Voting\Voting Methods\Election\Components\Ballots\Ordinal">
       <UniqueIdentifier>{e60a7d1f-ceb0-4fdf-8c50-0bf0a9157397}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Voting\Voting Methods\Election\Components\Ballots\Ordinal\Single Mark">
-      <UniqueIdentifier>{6a3b500b-2bd8-4497-9c6e-2d777661a341}</UniqueIdentifier>
-    </Filter>
     <Filter Include="Voting\Voting Methods\Election\Components\Ballots\Allocative\Single Mark">
-      <UniqueIdentifier>{a3e8b046-34f0-42fd-893b-00d64573bcb6}</UniqueIdentifier>
+      <UniqueIdentifier>{6a3b500b-2bd8-4497-9c6e-2d777661a341}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -407,7 +404,7 @@
       <Filter>Voting\Voting Methods\Methods\Multi Winner\Sequential\Component Structured</Filter>
     </ClCompile>
     <ClCompile Include="Source\SingleMark.cpp">
-      <Filter>Voting\Voting Methods\Election\Components\Ballots\Ordinal\Single Mark</Filter>
+      <Filter>Voting\Voting Methods\Election\Components\Ballots\Allocative\Single Mark</Filter>
     </ClCompile>
     <ClCompile Include="Source\OrdinalBallot.cpp">
       <Filter>Voting\Voting Methods\Election\Components\Ballots\Ordinal</Filter>
@@ -664,7 +661,7 @@
       <Filter>Voting\Voting Methods\Methods\Multi Winner\Sequential\Component Structured</Filter>
     </ClInclude>
     <ClInclude Include="Source\SingleMark.h">
-      <Filter>Voting\Voting Methods\Election\Components\Ballots\Ordinal\Single Mark</Filter>
+      <Filter>Voting\Voting Methods\Election\Components\Ballots\Allocative\Single Mark</Filter>
     </ClInclude>
     <ClInclude Include="Source\OrdinalBallot.h">
       <Filter>Voting\Voting Methods\Election\Components\Ballots\Ordinal</Filter>
