@@ -100,6 +100,7 @@
   <ItemGroup>
     <ClCompile Include="Source\AllocatedScore.cpp" />
     <ClCompile Include="Source\AllocatedSTAR.cpp" />
+    <ClCompile Include="Source\AllocativeBallot.cpp" />
     <ClCompile Include="Source\ApportionedCardinalVoting.cpp" />
     <ClCompile Include="Source\ApportionedScoreVoting.cpp" />
     <ClCompile Include="Source\ApportionedSTARVoting.cpp" />
@@ -122,7 +123,7 @@
     <ClCompile Include="Source\Domain.cpp" />
     <ClCompile Include="Source\Ebert.cpp" />
     <ClCompile Include="Source\Election.cpp" />
-    <ClCompile Include="Source\FPTPBallot.cpp" />
+    <ClCompile Include="Source\SingleMark.cpp" />
     <ClCompile Include="Source\HareRRV.cpp" />
     <ClCompile Include="Source\HareSelection.cpp" />
     <ClCompile Include="Source\HareSequentiallySpentScore.cpp" />
@@ -187,6 +188,7 @@
   <ItemGroup>
     <ClInclude Include="Source\AllocatedScore.h" />
     <ClInclude Include="Source\AllocatedSTAR.h" />
+    <ClInclude Include="Source\Allocative.h" />
     <ClInclude Include="Source\ApportionedCardinalVoting.h" />
     <ClInclude Include="Source\ApportionedScoreVoting.h" />
     <ClInclude Include="Source\ApportionedSTARVoting.h" />
@@ -209,7 +211,7 @@
     <ClInclude Include="Source\Domain.h" />
     <ClInclude Include="Source\Ebert.h" />
     <ClInclude Include="Source\Election.h" />
-    <ClInclude Include="Source\FPTPBallot.h" />
+    <ClInclude Include="Source\SingleMark.h" />
     <ClInclude Include="Source\HareRRV.h" />
     <ClInclude Include="Source\HareSelection.h" />
     <ClInclude Include="Source\HareSequentiallySpentScore.h" />

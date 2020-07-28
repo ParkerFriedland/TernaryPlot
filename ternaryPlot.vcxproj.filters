@@ -35,12 +35,6 @@
     <Filter Include="Voting\Voting Methods\Election\Components\Ballots\Cardinal\Score\With Additional Information">
       <UniqueIdentifier>{a0146b3a-53bb-4adc-97b7-edfa993bd270}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Voting\Voting Methods\Election\Components\Ballots\Ordinal">
-      <UniqueIdentifier>{682032ca-dbdc-429d-ba49-1119a82beace}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Voting\Voting Methods\Election\Components\Ballots\Ordinal\FPTP">
-      <UniqueIdentifier>{6a3b500b-2bd8-4497-9c6e-2d777661a341}</UniqueIdentifier>
-    </Filter>
     <Filter Include="Voting\Voting Methods\Election\Components\Results">
       <UniqueIdentifier>{9888dae8-8de4-4475-b878-44ee18c3523c}</UniqueIdentifier>
     </Filter>
@@ -149,6 +143,18 @@
     <Filter Include="Math">
       <UniqueIdentifier>{986239f0-1ba4-4acb-8aa8-033187502f84}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Voting\Voting Methods\Election\Components\Ballots\Allocative">
+      <UniqueIdentifier>{682032ca-dbdc-429d-ba49-1119a82beace}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Voting\Voting Methods\Election\Components\Ballots\Ordinal">
+      <UniqueIdentifier>{e60a7d1f-ceb0-4fdf-8c50-0bf0a9157397}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Voting\Voting Methods\Election\Components\Ballots\Ordinal\Single Mark">
+      <UniqueIdentifier>{6a3b500b-2bd8-4497-9c6e-2d777661a341}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Voting\Voting Methods\Election\Components\Ballots\Allocative\Single Mark">
+      <UniqueIdentifier>{a3e8b046-34f0-42fd-893b-00d64573bcb6}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Source\ApprovalBallot.cpp">
@@ -162,12 +168,6 @@
     </ClCompile>
     <ClCompile Include="Source\SubtractedCardinal.cpp">
       <Filter>Voting\Voting Methods\Election\Components\Ballots\Cardinal\Score\With Additional Information</Filter>
-    </ClCompile>
-    <ClCompile Include="Source\FPTPBallot.cpp">
-      <Filter>Voting\Voting Methods\Election\Components\Ballots\Ordinal\FPTP</Filter>
-    </ClCompile>
-    <ClCompile Include="Source\OrdinalBallot.cpp">
-      <Filter>Voting\Voting Methods\Election\Components\Ballots\Ordinal</Filter>
     </ClCompile>
     <ClCompile Include="Source\Domain.cpp">
       <Filter>Voting\Voting Methods\Election\Components\Domain</Filter>
@@ -406,6 +406,15 @@
     <ClCompile Include="Source\SequentiallySubtractedScore.cpp">
       <Filter>Voting\Voting Methods\Methods\Multi Winner\Sequential\Component Structured</Filter>
     </ClCompile>
+    <ClCompile Include="Source\SingleMark.cpp">
+      <Filter>Voting\Voting Methods\Election\Components\Ballots\Ordinal\Single Mark</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\OrdinalBallot.cpp">
+      <Filter>Voting\Voting Methods\Election\Components\Ballots\Ordinal</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\AllocativeBallot.cpp">
+      <Filter>Voting\Voting Methods\Election\Components\Ballots\Allocative</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Source\ApprovalBallot.h">
@@ -419,12 +428,6 @@
     </ClInclude>
     <ClInclude Include="Source\SubtractedCardinal.h">
       <Filter>Voting\Voting Methods\Election\Components\Ballots\Cardinal\Score\With Additional Information</Filter>
-    </ClInclude>
-    <ClInclude Include="Source\FPTPBallot.h">
-      <Filter>Voting\Voting Methods\Election\Components\Ballots\Ordinal\FPTP</Filter>
-    </ClInclude>
-    <ClInclude Include="Source\OrdinalBallot.h">
-      <Filter>Voting\Voting Methods\Election\Components\Ballots\Ordinal</Filter>
     </ClInclude>
     <ClInclude Include="Source\Domain.h">
       <Filter>Voting\Voting Methods\Election\Components\Domain</Filter>
@@ -659,6 +662,15 @@
     </ClInclude>
     <ClInclude Include="Source\SequentiallySubtractedScore.h">
       <Filter>Voting\Voting Methods\Methods\Multi Winner\Sequential\Component Structured</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\SingleMark.h">
+      <Filter>Voting\Voting Methods\Election\Components\Ballots\Ordinal\Single Mark</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\OrdinalBallot.h">
+      <Filter>Voting\Voting Methods\Election\Components\Ballots\Ordinal</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Allocative.h">
+      <Filter>Voting\Voting Methods\Election\Components\Ballots\Allocative</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
