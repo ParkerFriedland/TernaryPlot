@@ -664,7 +664,7 @@
       <Filter>Voting\Voting Methods\Methods\Multi Winner\Sequential\Component Structured\Non Standard Structure\Final Round Structure\Base Class</Filter>
     </ClInclude>
     <ClInclude Include="Source\ComponentStructured.h">
-      <Filter>Voting\Voting Methods\Methods\Multi Winner\Sequential\Component Structured\Non Standard Structure</Filter>
+      <Filter>Voting\Voting Methods\Methods\Multi Winner\Sequential\Component Structured\Base Class</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

@@ -23,7 +23,7 @@ const int width = 1024 /*255*/, height = 887 /*255*/;
 
 int main()
 {
-	ofstream img ("RRV4_deviation.ppm");
+	ofstream img ("Ideal.ppm");
 	img << "P3" << endl;
 	img << width << " " << height << endl;
 	img << "255" << endl;
@@ -48,7 +48,7 @@ int main()
 	ballots.push_back(ScoreBallot(vote2, 0.0, rand));
 	ballots.push_back(ScoreBallot(vote3, 0.0, rand));
 
-	VotingMethod<ScoreBallot>* method = new ReweightedRange(1);
+	VotingMethod<ScoreBallot>* method = new ReweightedSTAR();
 	reinterpret_cast<MultiWinnerMethod<ScoreBallot>*>(method)->SetNumSeats(numSeats);
 
 	Domain domain = Domain(3);
@@ -65,7 +65,7 @@ int main()
 			int r = 0, g = 0, b = 0;
 			if (Q[0] >= 0 && Q[1] >= 0 && Q[2] >= 0)
 			{
-				double approveC = Q[0];
+				double approveC = 0.7 * Q[0];
 				double approveM = 0.3 * Q[1];
 				double approveY = 0.5 * Q[2];
 
@@ -79,20 +79,20 @@ int main()
 
 				double idealM = approveM
 					+ (approveCM * ((approveM + approveMY) / (approveM + approveMY + approveC + approveCY))) // split CM into C and M
-					+ (approveMY * ((approveM + approveCM) / (approveM + approveCM + approveY + approveCY))); // split CY into C and Y
+					+ (approveMY * ((approveM + approveCM) / (approveM + approveCM + approveY + approveCY))); // split MY into M and Y
 
 				double idealY = approveY
-					+ (approveCY * ((approveY + approveMY) / (approveY + approveMY + approveC + approveCM))) // split CM into C and M
-					+ (approveMY * ((approveY + approveCY) / (approveY + approveCY + approveM + approveCM))); // split CY into C and Y
+					+ (approveCY * ((approveY + approveMY) / (approveY + approveMY + approveC + approveCM))) // split CY into C and Y
+					+ (approveMY * ((approveY + approveCY) / (approveY + approveCY + approveM + approveCM))); // split MY into M and Y
 
-				//double max = 1.0 -
-				//	 ((1.0 - idealC)
-				//	* (1.0 - idealM)
-				//	* (1.0 - idealY));
+				/*double max = 1.0 -
+					 ((1.0 - idealC)
+					* (1.0 - idealM)
+					* (1.0 - idealY));
 
-				//r = doubleToColor(idealC / max);
-				//g = doubleToColor(idealM / max);
-				//b = doubleToColor(idealY / max);
+				r = doubleToColor(idealC / max);
+				g = doubleToColor(idealM / max);
+				b = doubleToColor(idealY / max);*/
 
 				/*double max = 1.0 -
 						   ((1.0 - Q[0])
@@ -110,13 +110,13 @@ int main()
 				g = seatsToColor(seats[1], numSeats);
 				b = seatsToColor(seats[2], numSeats);*/
 
-				ballots[0].Reset(Q[0]);
+				/*ballots[0].Reset(Q[0]);
 				ballots[1].Reset(Q[1]);
 				ballots[2].Reset(Q[2]);
 
 				domain.IncludeAll();
 
-				method->CalculateResults(ballots, domain, out);
+				method->CalculateResults(ballots, domain, out);*/
 
 				/*double max = static_cast<double>(numSeats) * (1.0 -
 							((1.0 - (static_cast<double>(out.GetNumSeats(0)) / static_cast<double>(numSeats)))
@@ -126,14 +126,14 @@ int main()
 				g = seatsToColor(out.GetNumSeats(1), max);
 				b = seatsToColor(out.GetNumSeats(2), max);*/
 
-				double diffC = (static_cast<double>(out.GetNumSeats(0)) / static_cast<double>(numSeats) - idealC) / 2 + 0.5;
-				double diffM = (static_cast<double>(out.GetNumSeats(1)) / static_cast<double>(numSeats) - idealC) / 2 + 0.5;
-				double diffY = (static_cast<double>(out.GetNumSeats(2)) / static_cast<double>(numSeats) - idealC) / 2 + 0.5;
+				double diffC = (static_cast<double>(out.GetNumSeats(0)) / static_cast<double>(numSeats) - idealC) / 2.0 + 0.5;
+				double diffM = (static_cast<double>(out.GetNumSeats(1)) / static_cast<double>(numSeats) - idealC) / 2.0 + 0.5;
+				double diffY = (static_cast<double>(out.GetNumSeats(2)) / static_cast<double>(numSeats) - idealC) / 2.0 + 0.5;
 
-				/*double max = 1.0 -
+				double max = 1.0 -
 					 ((1.0 - diffC)
 					* (1.0 - diffM)
-					* (1.0 - diffY));*/
+					* (1.0 - diffY));
 
 				r = doubleToColor(diffC); // / max);
 				g = doubleToColor(diffM); // / max);
