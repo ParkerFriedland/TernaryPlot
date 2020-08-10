@@ -1,6 +1,6 @@
 #include "PAV.h"
 
-PAV::PAV(double oneSeatPerWinner) : OptimalMethod(oneSeatPerWinner) {}
+PAV::PAV(bool oneSeatPerWinner) : OptimalMethod(oneSeatPerWinner) {}
 
 double PAV::CalculateOutcomeQuality(const std::vector<ApprovalBallot> &ballots, const Outcome &outcome)
 {

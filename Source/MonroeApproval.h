@@ -1,8 +1,9 @@
 #include "OptimalMethod.h"
+#include "ApprovalBallot.h"
 
-class Monroe : public OptimalMethod
+class MonroeApproval : public OptimalMethod<ApprovalBallot, unsigned>
 {
 public:
-	Monroe(bool oneSeatPerWinner = false);
-	double CalculateOutcomeQuality(Outcome &outcome);
+	MonroeApproval(bool oneSeatPerWinner = false);
+	unsigned CalculateOutcomeQuality(const std::vector<ApprovalBallot>& ballots, const Outcome &outcome);
 };

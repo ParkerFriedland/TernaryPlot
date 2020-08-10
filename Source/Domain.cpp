@@ -1,8 +1,10 @@
 #include "Domain.h"
 
-Domain::Domain(unsigned candidates) : _domain(std::vector<bool>(candidates)) 
+Domain::Domain(unsigned candidates) : _domain(std::vector<bool>()) 
 {
-	IncludeAll();
+	_domain.reserve(candidates);
+	for (unsigned i = 0; i < candidates; ++i)
+		_domain.push_back(true);
 }
 
 Domain::Domain(std::vector<bool> &domain) : _domain(domain) {}

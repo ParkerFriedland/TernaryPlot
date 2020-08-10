@@ -27,22 +27,22 @@
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
     <ConfigurationType>Application</ConfigurationType>
     <UseDebugLibraries>true</UseDebugLibraries>
-    <PlatformToolset>v141</PlatformToolset>
+    <PlatformToolset>v142</PlatformToolset>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
     <ConfigurationType>Application</ConfigurationType>
     <UseDebugLibraries>false</UseDebugLibraries>
-    <PlatformToolset>v141</PlatformToolset>
+    <PlatformToolset>v142</PlatformToolset>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
     <ConfigurationType>Application</ConfigurationType>
     <UseDebugLibraries>true</UseDebugLibraries>
-    <PlatformToolset>v141</PlatformToolset>
+    <PlatformToolset>v142</PlatformToolset>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
     <ConfigurationType>Application</ConfigurationType>
     <UseDebugLibraries>false</UseDebugLibraries>
-    <PlatformToolset>v141</PlatformToolset>
+    <PlatformToolset>v142</PlatformToolset>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
   <ImportGroup Label="ExtensionSettings">
@@ -113,6 +113,7 @@
     <ClCompile Include="Source\BlocScore.cpp" />
     <ClCompile Include="Source\BlocSTAR.cpp" />
     <ClCompile Include="Source\CappedCardinal.cpp" />
+    <ClCompile Include="Source\FinalRoundStructured.cpp" />
     <ClCompile Include="Source\ScoreBallot.cpp" />
     <ClCompile Include="Source\ComponentStructured.cpp" />
     <ClCompile Include="Source\CPOSTV.cpp" />
@@ -126,7 +127,7 @@
     <ClCompile Include="Source\SingleMark.cpp" />
     <ClCompile Include="Source\HareRRV.cpp" />
     <ClCompile Include="Source\HareSelection.cpp" />
-    <ClCompile Include="Source\HareSequentiallySpentScore.cpp" />
+    <ClCompile Include="Source\HareSequentiallySubtractedScore.cpp" />
     <ClCompile Include="Source\HareSPAV.cpp" />
     <ClCompile Include="Source\Harmonic.cpp" />
     <ClCompile Include="Source\HarmonicPT.cpp" />
@@ -139,8 +140,6 @@
     <ClCompile Include="Source\MathFunctions.cpp" />
     <ClCompile Include="Source\MonroeApproval.cpp" />
     <ClCompile Include="Source\MonroeOrdering.cpp" />
-    <ClCompile Include="Source\MonroeOrdinal.cpp" />
-    <ClCompile Include="Source\MonroeScore.cpp" />
     <ClCompile Include="Source\MultiWinnerMethod.cpp" />
     <ClCompile Include="Source\NoTransformation.cpp" />
     <ClCompile Include="Source\OldProportionalSTAR.cpp" />
@@ -163,7 +162,7 @@
     <ClCompile Include="Source\ScoreSelection.cpp" />
     <ClCompile Include="Source\SelectionComponent.cpp" />
     <ClCompile Include="Source\SequentialEbert.cpp" />
-    <ClCompile Include="Source\SequentiallySpentScore.cpp" />
+    <ClCompile Include="Source\SequentiallyScaledScore.cpp" />
     <ClCompile Include="Source\SequentiallySubtractedScore.cpp" />
     <ClCompile Include="Source\SequentialMethod.cpp" />
     <ClCompile Include="Source\SequentialMonroe.cpp" />
@@ -179,7 +178,7 @@
     <ClCompile Include="Source\ternaryPlot.cpp" />
     <ClCompile Include="Source\TransformComponent.cpp" />
     <ClCompile Include="Source\Unitary.cpp" />
-    <ClCompile Include="Source\UnitaryCapping.cpp" />
+    <ClCompile Include="Source\UnitaryScaling.cpp" />
     <ClCompile Include="Source\UnitaryOrdering.cpp" />
     <ClCompile Include="Source\UnitarySubtracting.cpp" />
     <ClCompile Include="Source\Vector2D.cpp" />
@@ -201,6 +200,7 @@
     <ClInclude Include="Source\BlocSource.h" />
     <ClInclude Include="Source\BlocSTAR.h" />
     <ClInclude Include="Source\CappedCardinal.h" />
+    <ClInclude Include="Source\FinalRoundStructured.h" />
     <ClInclude Include="Source\ScoreBallot.h" />
     <ClInclude Include="Source\ComponentStructured.h" />
     <ClInclude Include="Source\CPOSTV.h" />
@@ -214,7 +214,7 @@
     <ClInclude Include="Source\SingleMark.h" />
     <ClInclude Include="Source\HareRRV.h" />
     <ClInclude Include="Source\HareSelection.h" />
-    <ClInclude Include="Source\HareSequentiallySpentScore.h" />
+    <ClInclude Include="Source\HareSequentiallySubtractedScore.h" />
     <ClInclude Include="Source\HareSPAV.h" />
     <ClInclude Include="Source\Harmonic.h" />
     <ClInclude Include="Source\HarmonicPT.h" />
@@ -227,8 +227,6 @@
     <ClInclude Include="Source\MathFunctions.h" />
     <ClInclude Include="Source\MonroeApproval.h" />
     <ClInclude Include="Source\MonroeOrdering.h" />
-    <ClInclude Include="Source\MonroeOrdinal.h" />
-    <ClInclude Include="Source\MonroeScore.h" />
     <ClInclude Include="Source\MultiWinnerMethod.h" />
     <ClInclude Include="Source\NoTransformation.h" />
     <ClInclude Include="Source\OldProportionalSTAR.h" />
@@ -251,7 +249,7 @@
     <ClInclude Include="Source\ScoreSelection.h" />
     <ClInclude Include="Source\SelectionComponent.h" />
     <ClInclude Include="Source\SequentialEbert.h" />
-    <ClInclude Include="Source\SequentiallySpentScore.h" />
+    <ClInclude Include="Source\SequentiallyScaledScore.h" />
     <ClInclude Include="Source\SequentiallySubtractedScore.h" />
     <ClInclude Include="Source\SequentialMethod.h" />
     <ClInclude Include="Source\SequentialMonroe.h" />
@@ -266,7 +264,7 @@
     <ClInclude Include="Source\TemperaryMethods.h" />
     <ClInclude Include="Source\TransformComponent.h" />
     <ClInclude Include="Source\Unitary.h" />
-    <ClInclude Include="Source\UnitaryCapping.h" />
+    <ClInclude Include="Source\UnitaryScaling.h" />
     <ClInclude Include="Source\UnitaryOrdering.h" />
     <ClInclude Include="Source\UnitarySubtracting.h" />
     <ClInclude Include="Source\Vector2D.h" />

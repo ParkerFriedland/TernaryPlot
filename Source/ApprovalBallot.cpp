@@ -4,7 +4,7 @@
 #pragma once
 
 ApprovalBallot::ApprovalBallot(std::vector <bool> &approvals, double weight, Random &prng)
-	: _approvals(approvals), Ballot(weight, prng) {}
+	: _approvals(approvals), Ballot(approvals.size(), weight, prng) {}
 
 void ApprovalBallot::RandomizePrefrences()
 {

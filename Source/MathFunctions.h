@@ -33,6 +33,39 @@ T Max(std::vector<T> &numbers)
 }
 
 template <typename T>
+void Sort3(T *_3nums)
+{
+	if (_3nums[1] < _3nums[0])
+		std::swap(_3nums[0], _3nums[1]);
+
+	if (_3nums[2] < _3nums[1])
+	{
+		std::swap(_3nums[1], _3nums[2]);
+		if (_3nums[1] < _3nums[0])
+			std::swap(_3nums[1], _3nums[0]);
+	}
+}
+
+template <typename T>
+void Sort4(T* _4nums)
+{
+	if (_4nums[1] < _4nums[0])
+		std::swap(_4nums[0], _4nums[1]);
+
+	if (_4nums[3] < _4nums[2])
+		std::swap(_4nums[2], _4nums[3]);
+
+	if (_4nums[2] < _4nums[0])
+		std::swap(_4nums[0], _4nums[2]);
+
+	if(_4nums[3] < _4nums[1])
+		std::swap(_4nums[1], _4nums[3]);
+
+	if(_4nums[2] < _4nums[1])
+		std::swap(_4nums[1], _4nums[2]);
+}
+
+template <typename T>
 T Square(T number)
 {
 	return number * number;
@@ -53,4 +86,4 @@ T IntPow(T number, int pow)
 }
 
 
-double NormalizedDigamma(double x, int accuracyTerms);
+double NormalizedDigamma(double x, unsigned accuracyTerms);

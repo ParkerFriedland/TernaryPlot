@@ -1,6 +1,11 @@
 #include "Outcome.h"
 
-Outcome::Outcome(unsigned candidates) : _seats(std::vector<unsigned>(candidates)), _tie(false) {}
+Outcome::Outcome(unsigned candidates) : _seats(std::vector<unsigned>()), _tie(false) 
+{
+	_seats.reserve(candidates);
+	for (unsigned i = 0; i < candidates; ++i)
+		_seats.push_back(0);
+}
 
 Outcome::Outcome(std::vector<unsigned> &seats) : _seats(seats), _tie(false) {}
 
@@ -16,7 +21,8 @@ void Outcome::AddSeat(unsigned nextWinner)
 
 void Outcome::ClearSeats()
 {
-	_seats.clear();
+	for (unsigned& candidate : _seats)
+		candidate = 0;
 	_tie = false;
 }
 

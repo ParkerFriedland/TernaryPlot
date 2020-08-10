@@ -6,7 +6,7 @@
 class Ballot
 {
 public:
-	Ballot(double weight = 1.0, Random &prng = Random());
+	Ballot(unsigned candidates = 3, double weight = 1.0, Random &prng = Random());
 
 	virtual void RandomizePrefrences() = 0;
 

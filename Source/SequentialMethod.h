@@ -12,8 +12,7 @@ public:
 		unsigned seats, bool oneSeatPerWinner) override;
 
 	virtual unsigned CalculateNextWinner(
-		std::vector<BallotType> &ballots, const Domain &domain, const Outcome &winners, 
-		unsigned seats, bool oneSeatPerWinner) = 0;
+		std::vector<BallotType> &ballots, const Domain &domain, const Outcome &winners, unsigned round, unsigned seats) = 0;
 
 private:
 	Outcome results;
@@ -31,6 +30,20 @@ void SequentialMethod<BallotType>::CalculateResults(
 	std::vector<BallotType> &ballots, Domain &domain, Outcome &results,
 	unsigned seats, bool oneSeatPerWinner)
 {
-	for (unsigned i = 0; i < seats; ++i)
-		results.AddSeat(CalculateNextWinner(ballots, domain, results, seats, oneSeatPerWinner));
+	if (oneSeatPerWinner)
+	{
+		for (unsigned i = 0; i < seats; ++i)
+		{
+			unsigned winner = CalculateNextWinner(ballots, domain, results, i, seats);
+			domain.Exclude(winner);
+			results.AddSeat(winner);
+		}
+	}
+	else
+	{
+		for (unsigned i = 0; i < seats;)
+			results.AddSeat(CalculateNextWinner(ballots, domain, results, ++i, seats));
+
+		//results.AddSeat(CalculateNextWinner(ballots, domain, results, seats, oneSeatPerWinner));
+	}
 }

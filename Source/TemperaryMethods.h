@@ -27,6 +27,14 @@ int TempScore(double votes[3]);
 int TempSTAR(double votes[3]);
 int TempDistributed(double votes[3]);
 
+int Temp_CB_Merged_With_RP(double votes[3]);
+int Temp_CB_Merged_With_RP_V2(double votes[3]);
+int Temp_CB_Merged_With_RP_V3(double votes[3]);
+int Temp_CB_Merged_With_SB(double votes[3]);
+int Temp_CB_Merged_With_SB_V2(double votes[3]);
+
+int Experiment(double votes[3]);
+
 int* TempPAV(int seats[3], double votes[3]);
 int* TempSainteLaguePAV(int seats[3], double votes[3]);
 int* TempEbert(int seats[3], double votes[3]);

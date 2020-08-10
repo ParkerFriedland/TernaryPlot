@@ -4,6 +4,6 @@
 class PAV : public OptimalMethod<ApprovalBallot, double>
 {
 public:
-	PAV(double oneSeatPerWinner = false);
+	PAV(bool oneSeatPerWinner = false);
 	double CalculateOutcomeQuality(const std::vector<ApprovalBallot> &ballots, const Outcome &outcome) override;
 };

@@ -1,5 +1,7 @@
 #include "ReweightingComponent.h"
 
+#pragma once
+
 class LinearDivisor : public ReweightingComponent
 {
 public:

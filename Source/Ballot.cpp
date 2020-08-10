@@ -2,7 +2,7 @@
 
 #pragma once
 
-Ballot::Ballot(double weight, Random &prng) : _defaultWeight(weight), _rand(&prng) {}
+Ballot::Ballot(unsigned candidiates, double weight, Random &prng) : _numCandidates(candidiates), _defaultWeight(weight), _currentWeight(weight), _rand(&prng) {}
 
 void Ballot::Reset()
 {

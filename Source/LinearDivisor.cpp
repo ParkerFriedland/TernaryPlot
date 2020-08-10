@@ -14,6 +14,6 @@ double LinearDivisor::GetDelta(double delta)
 
 void LinearDivisor::ReweightBallots(std::vector<ScoreBallot> &ballots, unsigned lastWinner)
 {
-	for (ScoreBallot ballot : ballots)
+	for (ScoreBallot &ballot : ballots)
 		ballot.AddToDivisor(ballot.GetRawScore(lastWinner) / _delta);
 }

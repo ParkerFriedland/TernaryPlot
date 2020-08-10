@@ -15,7 +15,9 @@ public:
 	void SetScore(double score, unsigned candidate);
 	double GetRawScore(unsigned candidate) const;
 	double GetTotalRawScore() const; // For distributed vote and methods related to culmutive voting.
+	double GetTotalRawScore(const Outcome &results) const; // For divisor re-weighting and for PSI
 	double GetCalculatedScore(unsigned candidate) const;
+	double GetUnweightedCalculatedScore(unsigned candidate) const;
 	const std::vector<double> &GetScores() const;
 	//std::vector<ApprovalBallot> KPT(); will add once I add ApprovalBallot class
 

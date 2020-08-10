@@ -4,7 +4,7 @@
 #pragma once
 
 ScoreBallot::ScoreBallot(std::vector<double> &scores, double weight, Random &prng)
-	: _scores(scores), Ballot(weight, prng) {}
+	: _scores(scores), Ballot(scores.size(), weight, prng) {}
 
 void ScoreBallot::RandomizePrefrences()
 {
@@ -67,9 +67,23 @@ double ScoreBallot::GetTotalRawScore() const
 	return sum;
 }
 
+double ScoreBallot::GetTotalRawScore(const Outcome &results) const
+{
+	double sum = 0;
+	for (unsigned i = 0; i < _scores.size(); ++i)
+		sum += results.GetNumSeats(i) * _scores[i];
+
+	return sum;
+}
+
 double ScoreBallot::GetCalculatedScore(unsigned candidate) const
 {
 	return GetCurrentRoundWeight() * Max<double>(Min<double>(_scores[candidate] - _sub, _cap), 0);
+}
+
+double ScoreBallot::GetUnweightedCalculatedScore(unsigned candidate) const
+{
+	return Max<double>(Min<double>(_scores[candidate] - _sub, _cap), 0);
 }
 
 const std::vector<double> &ScoreBallot::GetScores() const

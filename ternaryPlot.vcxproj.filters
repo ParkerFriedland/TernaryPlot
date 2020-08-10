@@ -152,6 +152,9 @@
     <Filter Include="Voting\Voting Methods\Election\Components\Ballots\Allocative\Single Mark">
       <UniqueIdentifier>{6a3b500b-2bd8-4497-9c6e-2d777661a341}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Voting\Voting Methods\Methods\Multi Winner\Optimal\Monroe">
+      <UniqueIdentifier>{883b85c0-c3e5-4321-9a3b-c3a02000a1a2}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Source\ApprovalBallot.cpp">
@@ -182,9 +185,6 @@
       <Filter>Voting\Voting Methods\Methods\Components\Reweighting Components\Base Class</Filter>
     </ClCompile>
     <ClCompile Include="Source\LinearDivisor.cpp">
-      <Filter>Voting\Voting Methods\Methods\Components\Reweighting Components</Filter>
-    </ClCompile>
-    <ClCompile Include="Source\UnitaryCapping.cpp">
       <Filter>Voting\Voting Methods\Methods\Components\Reweighting Components</Filter>
     </ClCompile>
     <ClCompile Include="Source\SelectionComponent.cpp">
@@ -241,15 +241,6 @@
     <ClCompile Include="Source\LeastSquares.cpp">
       <Filter>Voting\Voting Methods\Methods\Multi Winner\Optimal</Filter>
     </ClCompile>
-    <ClCompile Include="Source\MonroeApproval.cpp">
-      <Filter>Voting\Voting Methods\Methods\Multi Winner\Optimal</Filter>
-    </ClCompile>
-    <ClCompile Include="Source\MonroeOrdinal.cpp">
-      <Filter>Voting\Voting Methods\Methods\Multi Winner\Optimal</Filter>
-    </ClCompile>
-    <ClCompile Include="Source\MonroeScore.cpp">
-      <Filter>Voting\Voting Methods\Methods\Multi Winner\Optimal</Filter>
-    </ClCompile>
     <ClCompile Include="Source\PASMAC.cpp">
       <Filter>Voting\Voting Methods\Methods\Multi Winner\Optimal</Filter>
     </ClCompile>
@@ -292,16 +283,10 @@
     <ClCompile Include="Source\HareRRV.cpp">
       <Filter>Voting\Voting Methods\Methods\Multi Winner\Sequential\Component Structured</Filter>
     </ClCompile>
-    <ClCompile Include="Source\HareSequentiallySpentScore.cpp">
-      <Filter>Voting\Voting Methods\Methods\Multi Winner\Sequential\Component Structured</Filter>
-    </ClCompile>
     <ClCompile Include="Source\HareSPAV.cpp">
       <Filter>Voting\Voting Methods\Methods\Multi Winner\Sequential\Component Structured</Filter>
     </ClCompile>
     <ClCompile Include="Source\OldProportionalSTAR.cpp">
-      <Filter>Voting\Voting Methods\Methods\Multi Winner\Sequential\Component Structured</Filter>
-    </ClCompile>
-    <ClCompile Include="Source\SequentiallySpentScore.cpp">
       <Filter>Voting\Voting Methods\Methods\Multi Winner\Sequential\Component Structured</Filter>
     </ClCompile>
     <ClCompile Include="Source\OrderingMethod.cpp">
@@ -412,6 +397,21 @@
     <ClCompile Include="Source\AllocativeBallot.cpp">
       <Filter>Voting\Voting Methods\Election\Components\Ballots\Allocative</Filter>
     </ClCompile>
+    <ClCompile Include="Source\MonroeApproval.cpp">
+      <Filter>Voting\Voting Methods\Methods\Multi Winner\Optimal\Monroe</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\UnitaryScaling.cpp">
+      <Filter>Voting\Voting Methods\Methods\Components\Reweighting Components</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\SequentiallyScaledScore.cpp">
+      <Filter>Voting\Voting Methods\Methods\Multi Winner\Sequential\Component Structured</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\HareSequentiallySubtractedScore.cpp">
+      <Filter>Voting\Voting Methods\Methods\Multi Winner\Sequential\Component Structured</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\FinalRoundStructured.cpp">
+      <Filter>Voting\Voting Methods\Methods\Multi Winner\Sequential\Component Structured\Non Standard Structure\Final Round Structure\Base Class</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Source\ApprovalBallot.h">
@@ -442,9 +442,6 @@
       <Filter>Voting\Voting Methods\Methods\Components\Reweighting Components\Base Class</Filter>
     </ClInclude>
     <ClInclude Include="Source\LinearDivisor.h">
-      <Filter>Voting\Voting Methods\Methods\Components\Reweighting Components</Filter>
-    </ClInclude>
-    <ClInclude Include="Source\UnitaryCapping.h">
       <Filter>Voting\Voting Methods\Methods\Components\Reweighting Components</Filter>
     </ClInclude>
     <ClInclude Include="Source\SelectionComponent.h">
@@ -501,15 +498,6 @@
     <ClInclude Include="Source\LeastSquares.h">
       <Filter>Voting\Voting Methods\Methods\Multi Winner\Optimal</Filter>
     </ClInclude>
-    <ClInclude Include="Source\MonroeApproval.h">
-      <Filter>Voting\Voting Methods\Methods\Multi Winner\Optimal</Filter>
-    </ClInclude>
-    <ClInclude Include="Source\MonroeOrdinal.h">
-      <Filter>Voting\Voting Methods\Methods\Multi Winner\Optimal</Filter>
-    </ClInclude>
-    <ClInclude Include="Source\MonroeScore.h">
-      <Filter>Voting\Voting Methods\Methods\Multi Winner\Optimal</Filter>
-    </ClInclude>
     <ClInclude Include="Source\PASMAC.h">
       <Filter>Voting\Voting Methods\Methods\Multi Winner\Optimal</Filter>
     </ClInclude>
@@ -524,9 +512,6 @@
     </ClInclude>
     <ClInclude Include="Source\SequentialMethod.h">
       <Filter>Voting\Voting Methods\Methods\Multi Winner\Sequential\Base Class</Filter>
-    </ClInclude>
-    <ClInclude Include="Source\ComponentStructured.h">
-      <Filter>Voting\Voting Methods\Methods\Multi Winner\Sequential\Component Structured\Base Class</Filter>
     </ClInclude>
     <ClInclude Include="Source\ApportionedCardinalVoting.h">
       <Filter>Voting\Voting Methods\Methods\Multi Winner\Sequential\Component Structured\Non Standard Structure\Apportioned Cardinal Voting\Base Class</Filter>
@@ -552,16 +537,10 @@
     <ClInclude Include="Source\HareRRV.h">
       <Filter>Voting\Voting Methods\Methods\Multi Winner\Sequential\Component Structured</Filter>
     </ClInclude>
-    <ClInclude Include="Source\HareSequentiallySpentScore.h">
-      <Filter>Voting\Voting Methods\Methods\Multi Winner\Sequential\Component Structured</Filter>
-    </ClInclude>
     <ClInclude Include="Source\HareSPAV.h">
       <Filter>Voting\Voting Methods\Methods\Multi Winner\Sequential\Component Structured</Filter>
     </ClInclude>
     <ClInclude Include="Source\OldProportionalSTAR.h">
-      <Filter>Voting\Voting Methods\Methods\Multi Winner\Sequential\Component Structured</Filter>
-    </ClInclude>
-    <ClInclude Include="Source\SequentiallySpentScore.h">
       <Filter>Voting\Voting Methods\Methods\Multi Winner\Sequential\Component Structured</Filter>
     </ClInclude>
     <ClInclude Include="Source\OrderingMethod.h">
@@ -668,6 +647,24 @@
     </ClInclude>
     <ClInclude Include="Source\Allocative.h">
       <Filter>Voting\Voting Methods\Election\Components\Ballots\Allocative</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\MonroeApproval.h">
+      <Filter>Voting\Voting Methods\Methods\Multi Winner\Optimal\Monroe</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\UnitaryScaling.h">
+      <Filter>Voting\Voting Methods\Methods\Components\Reweighting Components</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\SequentiallyScaledScore.h">
+      <Filter>Voting\Voting Methods\Methods\Multi Winner\Sequential\Component Structured</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\HareSequentiallySubtractedScore.h">
+      <Filter>Voting\Voting Methods\Methods\Multi Winner\Sequential\Component Structured</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\FinalRoundStructured.h">
+      <Filter>Voting\Voting Methods\Methods\Multi Winner\Sequential\Component Structured\Non Standard Structure\Final Round Structure\Base Class</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\ComponentStructured.h">
+      <Filter>Voting\Voting Methods\Methods\Multi Winner\Sequential\Component Structured\Non Standard Structure</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
