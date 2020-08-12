@@ -8,7 +8,7 @@
 class ScoreBallot : public Ballot
 {
 public:
-	ScoreBallot(std::vector<double> &scores, double weight = 1.0, Random &prng = Random());
+	ScoreBallot(std::vector<double> &scores, double weight, Random &prng);
 
 	void RandomizePrefrences();
 

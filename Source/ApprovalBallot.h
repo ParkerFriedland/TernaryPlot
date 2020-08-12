@@ -8,7 +8,7 @@
 class ApprovalBallot : public Ballot
 {
 public:
-	ApprovalBallot(std::vector<bool> &approvals, double weight = 1.0, Random &prng = Random());
+	ApprovalBallot(std::vector<bool> &approvals, double weight, Random &prng);
 
 	void RandomizePrefrences();
 
