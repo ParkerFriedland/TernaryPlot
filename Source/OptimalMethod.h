@@ -27,7 +27,7 @@ private:
 	void OnNumSeatsPerWinnerChange();
 	bool _isOutcomeListDirty = true;
 
-	std::vector<Outcome> *_outcomeList;
+	std::vector<Outcome> _outcomeList;
 };
 
 // If I wasn't working in Visual Studios, I would just include all of this code in the cpp file 
@@ -52,7 +52,7 @@ std::vector<Outcome> OptimalMethod<BallotType, QualityValue>::GeneratePosssibleO
 template<typename BallotType, typename QualityValue>
 void OptimalMethod<BallotType, QualityValue>::SetPosssibleOutcomes(int numSeats, bool oneSeatPerWinner)
 {
-	_outcomeList = &GeneratePosssibleOutcomes(numSeats, oneSeatPerWinner);
+	_outcomeList = GeneratePosssibleOutcomes(numSeats, oneSeatPerWinner);
 }
 
 template<typename BallotType, typename QualityValue>
@@ -77,15 +77,14 @@ void OptimalMethod<BallotType, QualityValue>::SetPossibleOutcomes(std::vector<Ou
 	SetNumSeats(maxNumSeats);
 	SetOneSeatPerWinner(oneSeatPerWinner);
 
-	delete _outcomeList;
-	_outcomeList = &possibleOutcomes;
+	_outcomeList = possibleOutcomes;
 	_isOutcomeListDirty = false;
 }
 
 template<typename BallotType, typename QualityValue>
 std::vector<Outcome> &OptimalMethod<BallotType, QualityValue>::GetPossibleOutcomes()
 {
-	return *_outcomeList;
+	return _outcomeList;
 }
 
 template<typename BallotType, typename QualityValue>
@@ -97,7 +96,7 @@ void OptimalMethod<BallotType, QualityValue>::CalculateResults(
 	if (_isOutcomeListDirty)
 		SetPosssibleOutcomes(GetNumSeats(), IsOneSeatPerWinner());
 
-	return CalculateResults(ballots, domain, results, *_outcomeList);
+	return CalculateResults(ballots, domain, results, _outcomeList);
 }
 
 template<typename BallotType, typename QualityValue>
