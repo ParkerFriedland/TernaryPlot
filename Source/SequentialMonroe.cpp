@@ -4,7 +4,7 @@
 SequentialMonroe::SequentialMonroe(unsigned seats, bool oneSeatPerWinner) : SequentialMethod(seats, oneSeatPerWinner) {}
 
 unsigned SequentialMonroe::CalculateNextWinner(
-	std::vector<ScoreBallot>& ballots, const Domain& domain, const Outcome& winners, unsigned, unsigned seats)
+	std::vector<ScoreBallot>& ballots, const Domain& domain, const Outcome& winners, unsigned round, unsigned seats)
 {
 	// Really really bad temperary code that I'm going to get rid of.
 	//
@@ -19,187 +19,121 @@ unsigned SequentialMonroe::CalculateNextWinner(
 
 	while (domain.NextInDomain(currCandidate))
 	{
-		badCode[0] = ballots[0].GetRawScore(currCandidate);
-		badCode[1] = ballots[1].GetRawScore(currCandidate);
-		badCode[2] = ballots[2].GetRawScore(currCandidate);
-		Sort3(badCode);
+		sortedScores[0] = ballots[0].GetRawScore(currCandidate);
+		sortedScores[1] = ballots[1].GetRawScore(currCandidate);
+		sortedScores[2] = ballots[2].GetRawScore(currCandidate);
+		Sort3(sortedScores);
 
-		double currHareScore;
+		double currHareScore = 0;
 		double currTiebreaker = ballots[0].GetCalculatedScore(currCandidate)
 							  + ballots[1].GetCalculatedScore(currCandidate)
 							  + ballots[2].GetCalculatedScore(currCandidate);
-		double weightInQuota;
+		double quotaLeft = quota;
 
-		if (badCode[2] == ballots[0].GetRawScore(currCandidate))
-		{
-			currHareScore = ballots[0].GetCalculatedScore(currCandidate);
-			weightInQuota = ballots[0].GetCurrentRoundWeight();
-		}
-		else if (badCode[2] == ballots[1].GetRawScore(currCandidate))
-		{
-			currHareScore = ballots[1].GetCalculatedScore(currCandidate);
-			weightInQuota = ballots[1].GetCurrentRoundWeight();
-		}
-		else
-		{
-			currHareScore = ballots[2].GetCalculatedScore(currCandidate);
-			weightInQuota = ballots[2].GetCurrentRoundWeight();
-		}
+		for(unsigned i = 0; i < 3; ++i)
+			currExaustionCoeficient[i] = 0.0;
 
-		if (weightInQuota >= quota)
+		unsigned i = 2;
+		while(true)
 		{
-			currHareScore *= (quota / weightInQuota);
-			if (currHareScore > maxHareScore 
-			|| (currHareScore == maxHareScore && currTiebreaker > tiebreakerScore))
+			double nextWeightSum = 0;
+			double nextScoreSum = 0;
+			double currScore = sortedScores[i];
+			double exaustionFactor = -1;
+
+			for (unsigned ballot = 0; ballot < 3; ++ballot)
 			{
-				maxHareScore = currHareScore;
-				tiebreakerScore = currTiebreaker;
-				winningCandidate = currCandidate;
-				continue;
+				if (currScore == ballots[ballot].GetRawScore(currCandidate))
+				{
+					nextScoreSum += ballots[ballot].GetCalculatedScore(currCandidate);
+					nextWeightSum += ballots[ballot].GetCurrentRoundWeight();
+
+					if (i == 0 || currScore != sortedScores[--i])
+					{
+						if (quotaLeft >= nextWeightSum)
+						{
+							exaustionFactor = 1.0;
+							quotaLeft -= nextWeightSum;
+						}
+						else
+						{
+							exaustionFactor = quotaLeft / nextWeightSum;
+							quotaLeft = 0.0;
+						}
+
+						for(; ballot != -1; --ballot)
+							if(currScore == ballots[ballot].GetRawScore(currCandidate))
+								currExaustionCoeficient[ballot] = exaustionFactor;
+
+						break;
+					}
+				}
 			}
-		}
 
-		double nextWeight;
-		double nextScore;
+			/*if (exaustionFactor == -1)
+				bool debug = true;*/
 
-		if (badCode[1] == ballots[0].GetRawScore(currCandidate))
-		{
-			nextScore = ballots[0].GetCalculatedScore(currCandidate);
-			nextWeight = ballots[0].GetCurrentRoundWeight();
-		}
-		else if (badCode[1] == ballots[1].GetRawScore(currCandidate))
-		{
-			nextScore = ballots[1].GetCalculatedScore(currCandidate);
-			nextWeight = ballots[1].GetCurrentRoundWeight();
-		}
-		else
-		{
-			nextScore = ballots[2].GetCalculatedScore(currCandidate);
-			nextWeight = ballots[2].GetCurrentRoundWeight();
-		}
-
-		if ((weightInQuota + nextWeight) >= quota)
-		{
-			nextScore *= (quota - weightInQuota) / nextWeight;
-			currHareScore += nextScore;
-
-			if (currHareScore > maxHareScore
-			|| (currHareScore == maxHareScore && currTiebreaker > tiebreakerScore))
+			if (!quotaLeft || i == 0)
 			{
-				maxHareScore = currHareScore;
-				tiebreakerScore = currTiebreaker;
-				winningCandidate = currCandidate;
-				continue;
+				nextScoreSum *= exaustionFactor;
+				currHareScore += nextScoreSum;
+
+				if (currHareScore > maxHareScore
+				|| (currHareScore == maxHareScore && currTiebreaker > tiebreakerScore))
+				{
+					maxHareScore = currHareScore;
+					tiebreakerScore = currTiebreaker;
+					winningCandidate = currCandidate;
+
+					for (unsigned i = 0; i < 3; ++i)
+						finalExaustionCoeficient[i] = currExaustionCoeficient[i];
+
+					if(maxHareScore == quota)
+						goto winnerFound;
+				}
+				break;
 			}
-		}
-
-		if (badCode[0] == ballots[0].GetRawScore(currCandidate))
-		{
-			weightInQuota += ballots[0].GetCurrentRoundWeight();
-		}
-		else if (badCode[0] == ballots[1].GetRawScore(currCandidate))
-		{
-			weightInQuota += ballots[1].GetCurrentRoundWeight();
-		}
-		else
-		{
-			weightInQuota += ballots[2].GetCurrentRoundWeight();
-		}
-		
-		if (currHareScore > maxHareScore
-		|| (currHareScore == maxHareScore && currTiebreaker > tiebreakerScore))
-		{
-			maxHareScore = currHareScore;
-			tiebreakerScore = currTiebreaker;
-			winningCandidate = currCandidate;
+			else
+				currHareScore += nextScoreSum;
 		}
 	}
 
-	badCode[0] = ballots[0].GetRawScore(winningCandidate);
-	badCode[1] = ballots[1].GetRawScore(winningCandidate);
-	badCode[2] = ballots[2].GetRawScore(winningCandidate);
-	Sort3(badCode);
-
-	double weightInQuota;
-	unsigned lastBallot;
-
-	if (badCode[2] == ballots[0].GetRawScore(winningCandidate))
+	winnerFound:if (round < seats)
 	{
-		weightInQuota = ballots[0].GetCurrentRoundWeight();
-		lastBallot = 0;
-	}
-	else if (badCode[2] == ballots[1].GetRawScore(winningCandidate))
-	{
-		weightInQuota = ballots[1].GetCurrentRoundWeight();
-		lastBallot = 1;
-	}
-	else
-	{
-		weightInQuota = ballots[2].GetCurrentRoundWeight();
-		lastBallot = 2;
-	}
-
-	if (weightInQuota > quota)
-	{
-		ballots[lastBallot].SetCurrentWeight(weightInQuota - quota);
-		return winningCandidate;
-	}
-	else
-	{
-		ballots[lastBallot].SetCurrentWeight(0);
-	}
-
-	if (badCode[1] == ballots[0].GetRawScore(winningCandidate))
-	{
-		weightInQuota += ballots[0].GetCurrentRoundWeight();
-		lastBallot = 0;
-	}
-	else if (badCode[1] == ballots[1].GetRawScore(winningCandidate))
-	{
-		weightInQuota += ballots[1].GetCurrentRoundWeight();
-		lastBallot = 1;
-	}
-	else
-	{
-		weightInQuota += ballots[2].GetCurrentRoundWeight();
-		lastBallot = 2;
-	}
-
-	if (weightInQuota > quota)
-	{
-		ballots[lastBallot].SetCurrentWeight(weightInQuota - quota);
-		return winningCandidate;
-	}
-	else
-	{
-		ballots[lastBallot].SetCurrentWeight(0);
-	}
-
-	if (badCode[0] == ballots[0].GetRawScore(winningCandidate))
-	{
-		weightInQuota += ballots[0].GetCurrentRoundWeight();
-		lastBallot = 0;
-	}
-	else if (badCode[0] == ballots[1].GetRawScore(winningCandidate))
-	{
-		weightInQuota += ballots[1].GetCurrentRoundWeight();
-		lastBallot = 1;
-	}
-	else
-	{
-		weightInQuota += ballots[2].GetCurrentRoundWeight();
-		lastBallot = 2;
-	}
-
-	if (weightInQuota > quota)
-	{
-		ballots[lastBallot].SetCurrentWeight(weightInQuota - quota);
-		return winningCandidate;
-	}
-	else
-	{
-		ballots[lastBallot].SetCurrentWeight(0);
+		for (unsigned ballot = 0; ballot < 3; ++ballot)
+			ballots[ballot].SetCurrentWeight(
+				ballots[ballot].GetCurrentRoundWeight() 
+				* (1.0 - finalExaustionCoeficient[ballot]));
 	}
 
 	return winningCandidate;
+}
+
+double SequentialMonroe::FindNextHighestScores(unsigned &i, const std::vector<ScoreBallot> &ballots,
+	double &scoreSum, double &weightSum, double &quotaleft, unsigned currCandidate)
+{
+	for (unsigned ballot = 0; ballot < 3; ++ballot)
+		if (sortedScores[i] == ballots[ballot].GetRawScore(currCandidate))
+		{
+			scoreSum += ballots[ballot].GetCalculatedScore(currCandidate);
+			weightSum += ballots[ballot].GetCurrentRoundWeight();
+			
+			if (i != 0 && sortedScores[i] == sortedScores[--i])
+				return currExaustionCoeficient[ballot] = FindNextHighestScores(
+					i, ballots, scoreSum, weightSum, quotaleft, currCandidate);
+			else
+			{
+				if (quotaleft >= weightSum)
+				{
+					currExaustionCoeficient[ballot] = 1.0;
+					quotaleft -= weightSum;
+				}
+				else
+				{
+					currExaustionCoeficient[ballot] = quotaleft / weightSum;
+					quotaleft = 0.0;
+				}
+				return currExaustionCoeficient[ballot];
+			}
+		}
 }

@@ -55,10 +55,21 @@ unsigned Ballot::GetNumCandidates() const
 	return _numCandidates;
 }
 
+void Ballot::SetDivisor(double amount)
+{
+	_divisor = amount;
+	_currentWeight = _defaultWeight / _divisor;
+}
+
 void Ballot::AddToDivisor(double amount)
 {
 	_divisor += amount;
 	_currentWeight = _defaultWeight / _divisor;
+}
+
+double Ballot::GetDivisor()
+{
+	return _divisor;
 }
 
 const Random &Ballot::GetPRNG()

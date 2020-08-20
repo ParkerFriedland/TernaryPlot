@@ -379,9 +379,6 @@
     <ClCompile Include="Source\ScoreBallot.cpp">
       <Filter>Voting\Voting Methods\Election\Components\Ballots\Cardinal\Score</Filter>
     </ClCompile>
-    <ClCompile Include="Source\ternaryPlot.cpp">
-      <Filter>Voting\Ternary Plot</Filter>
-    </ClCompile>
     <ClCompile Include="Source\UnitarySubtracting.cpp">
       <Filter>Voting\Voting Methods\Methods\Components\Reweighting Components</Filter>
     </ClCompile>
@@ -411,6 +408,12 @@
     </ClCompile>
     <ClCompile Include="Source\FinalRoundStructured.cpp">
       <Filter>Voting\Voting Methods\Methods\Multi Winner\Sequential\Component Structured\Non Standard Structure\Final Round Structure\Base Class</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\SingleDistributedVote.cpp">
+      <Filter>Voting\Voting Methods\Methods\Multi Winner\Sequential\Ordering Methods</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\TempTernaryPlot.cpp">
+      <Filter>Voting\Ternary Plot</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -665,6 +668,9 @@
     </ClInclude>
     <ClInclude Include="Source\ComponentStructured.h">
       <Filter>Voting\Voting Methods\Methods\Multi Winner\Sequential\Component Structured\Base Class</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\SingleDistributedVote.h">
+      <Filter>Voting\Voting Methods\Methods\Multi Winner\Sequential\Ordering Methods</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

@@ -1,5 +1,7 @@
 #include "SequentialMethod.h"
 
+#pragma once
+
 class OrderingMethod : public SequentialMethod<ScoreBallot>
 {
 public:

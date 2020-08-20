@@ -124,6 +124,7 @@
     <ClCompile Include="Source\Domain.cpp" />
     <ClCompile Include="Source\Ebert.cpp" />
     <ClCompile Include="Source\Election.cpp" />
+    <ClCompile Include="Source\SingleDistributedVote.cpp" />
     <ClCompile Include="Source\SingleMark.cpp" />
     <ClCompile Include="Source\HareRRV.cpp" />
     <ClCompile Include="Source\HareSelection.cpp" />
@@ -175,7 +176,7 @@
     <ClCompile Include="Source\STV.cpp" />
     <ClCompile Include="Source\SubtractedCardinal.cpp" />
     <ClCompile Include="Source\TemperaryMethods.cpp" />
-    <ClCompile Include="Source\ternaryPlot.cpp" />
+    <ClCompile Include="Source\TempTernaryPlot.cpp" />
     <ClCompile Include="Source\TransformComponent.cpp" />
     <ClCompile Include="Source\Unitary.cpp" />
     <ClCompile Include="Source\UnitaryScaling.cpp" />
@@ -211,6 +212,7 @@
     <ClInclude Include="Source\Domain.h" />
     <ClInclude Include="Source\Ebert.h" />
     <ClInclude Include="Source\Election.h" />
+    <ClInclude Include="Source\SingleDistributedVote.h" />
     <ClInclude Include="Source\SingleMark.h" />
     <ClInclude Include="Source\HareRRV.h" />
     <ClInclude Include="Source\HareSelection.h" />
