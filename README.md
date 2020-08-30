@@ -1,5 +1,7 @@
 # TernaryPlot
 
+https://forum.electionscience.org/t/sequential-multiwinner-voting-methods-visualized/773
+
 If you haven't seen the previous [ternary plot](https://www.youtube.com/watch?v=h8tFnC4pNGc) diagrams I have done for [single winner voting methods](https://forum.electionscience.org/t/single-winner-voting-methods-visualized/575?u=parker_friedland) and [apportionment algorithms](https://forum.electionscience.org/t/apportionment-algorithems-visualized/569?u=parker_friedland), you might want to check those out as well.
 
 The fallowing ternary plot represents what portion each of 3 different groups of voters (the cyan group, the magenta group, and the yellow) makes up of the electorate:
